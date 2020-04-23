@@ -1,0 +1,30 @@
+.Game{
+    display: flex;
+    padding: 15px;
+    margin: 0;
+
+    section {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 5px auto 5px auto;
+
+        article {
+            width: 18%;
+            height: auto;
+            display: flex;
+            margin: 5px;
+            border-radius: 12px;
+            border: 6px solid #f9af00b3;
+
+            img {
+                width: 100%;
+                height: 120px;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 7px;
+            }
+        }
+    }
+}

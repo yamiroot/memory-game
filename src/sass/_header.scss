@@ -1,0 +1,21 @@
+header {
+    height: 150px;
+    background: gold;
+    margin: 0;
+
+    img {
+        margin: 0;
+        width: 30%;
+        height: 110px;
+    }
+
+    button {
+        width: 20%;
+        height: 70px;
+        border: 5px solid gray;
+        border-radius: 5px;
+        background: rgb(253, 212, 77);
+        color: white;
+        float: right;
+    }
+}

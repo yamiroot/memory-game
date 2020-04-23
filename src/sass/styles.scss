@@ -1,0 +1,17 @@
+@import '_header';
+@import '_cards';
+
+body {
+    margin: 0;
+    background: #fffb95;
+
+    #root {
+        margin: 0;
+        
+        .App {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
