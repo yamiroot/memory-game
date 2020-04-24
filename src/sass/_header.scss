@@ -1,21 +1,32 @@
 header {
-    height: 150px;
-    background: gold;
+    height: 120px;
+    background: #ffe300;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    img {
-        margin: 0;
-        width: 30%;
-        height: 110px;
+    #linkImgLogo {
+        margin-left: 60px;
+
+        img {   
+            width: 100%;
+            height: 90px;
+        }
     }
 
     button {
-        width: 20%;
-        height: 70px;
-        border: 5px solid gray;
-        border-radius: 5px;
+        width: 100%;
+        height: 60px;
+        border: 3px solid rgb(128, 128, 128);
+        border-radius: 10px;
         background: rgb(253, 212, 77);
-        color: white;
+        color: black;
         float: right;
+        margin-right: 60px;
+        font-family: 'Indie Flower', cursive;
+        font-family: 'Coming Soon', cursive;
+        font-family: 'Chilanka', cursive;
+        font-size: 18px;
     }
 }

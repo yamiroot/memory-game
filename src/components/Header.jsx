@@ -1,10 +1,14 @@
 import React from 'react';
-import ImgLogo from '../img/MemoryGame.png';
+import ImgLogo from '../img/logoGame.png';
 
 const Header = () => (
   <header className="Header">
-    <img src={ImgLogo} alt="Logo de juego Memory Game" />
-    <button type="button">Instrucciones</button>
+    <a href="./" id="linkImgLogo">
+      <img src={ImgLogo} alt="Logo de juego Memory Game" />
+    </a>
+    <a href="./">
+      <button type="button">Instrucciones</button>
+    </a>
   </header>
 );
 
