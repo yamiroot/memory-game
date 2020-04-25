@@ -9,7 +9,7 @@ import ImgYamada from '../img/mis-vecinos-los-yamada.jpg';
 import ImgSusurros from '../img/susurros-del-corazon.jpg';
 
 
-const Cards = () => (
+const GameCards = () => (
   <main className="Game">
     <section className="Cards">
       <article>
@@ -65,4 +65,4 @@ const Cards = () => (
 );
 
 
-export default Cards;
+export default GameCards;

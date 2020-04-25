@@ -1,17 +1,15 @@
 import React from 'react';
 import './css/styles.css';
-import Header from './components/Header';
-import Cards from './components/Cards';
-import Footer from './components/Footer';
+import Router from './Router';
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Cards />
-      <Footer />
+      <Router />
     </div>
   );
 }
+
 
 export default App;
