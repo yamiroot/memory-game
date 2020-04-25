@@ -93,6 +93,40 @@ header button {
   margin: 7px;
 }
 
+.PageError {
+  display: flex;
+  padding: 60px;
+  margin: 0px;
+  padding: 60px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.PageError h1 {
+  font-family: "Bungee Shade", cursive;
+  font-size: 150px;
+  margin: 25px;
+}
+.PageError section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 25px;
+}
+.PageError section img {
+  width: 120px;
+  height: auto;
+  margin: 10px;
+}
+.PageError section p {
+  font-family: "Indie Flower", cursive;
+  font-family: "Coming Soon", cursive;
+  font-family: "Chilanka", cursive;
+  font-size: 22px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -107,7 +141,7 @@ body #root .App {
   flex-direction: column;
 }
 body #root .App footer {
-  padding-bottom: 2px;
+  padding-bottom: 10px;
   font-family: "Indie Flower", cursive;
   font-family: "Coming Soon", cursive;
   font-family: "Chilanka", cursive;

@@ -1,0 +1,38 @@
+.PageError {
+    display: flex;
+    padding: 60px;
+    margin: 0px;
+    padding: 60px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+
+
+    h1 {
+        font-family: 'Bungee Shade', cursive;
+        font-size: 150px;
+        margin: 25px;
+    }
+
+    section {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        margin: 25px;
+        
+        img {
+            width: 120px;
+            height: auto;
+            margin: 10px;
+        }
+    
+        p {
+            font-family: 'Indie Flower', cursive;
+            font-family: 'Coming Soon', cursive;
+            font-family: 'Chilanka', cursive;
+            font-size: 22px;
+        }
+    }
+}

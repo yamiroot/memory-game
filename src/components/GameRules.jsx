@@ -15,7 +15,7 @@ const GameRules = () => (
         <article>
           <img src={ImgUno} alt="Step One" />
           <h4 className="text-center">Reglas generales</h4>
-          <ul className="text-center">
+          <ul>
             <li>Un jugador permitido.</li>
             <li>16 cartas. 8 pares idénticas.</li>
             <li>Las cartas cargan aleatoriamente en cada partida.</li>
