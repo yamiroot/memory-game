@@ -1,8 +1,11 @@
 @import '_header';
-@import '_cards';
+@import '_gamecards';
+@import '_gamerules';
+
 
 body {
     margin: 0;
+    padding: 0;
     background: #fffb95;
 
     #root {
@@ -14,7 +17,7 @@ body {
             flex-direction: column;
 
             footer {
-                padding-bottom: 15px;
+                padding-bottom: 2px;
                 font-family: 'Indie Flower', cursive;
                 font-family: 'Coming Soon', cursive;
                 font-family: 'Chilanka', cursive;

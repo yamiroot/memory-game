@@ -1,0 +1,42 @@
+.GameRules{
+    display: flex;
+    padding: 40px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2{
+        font-family: 'Indie Flower', cursive;
+        font-family: 'Coming Soon', cursive;
+        font-family: 'Chilanka', cursive;
+        margin: 20px;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        article {
+            width: 30%;
+            margin: 15px;
+            padding: 0px 15px 20px 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Indie Flower', cursive;
+            font-family: 'Coming Soon', cursive;
+            font-family: 'Chilanka', cursive;
+            font-size: 18px;
+    
+            img, h4, p, ul {
+                margin: 7px;
+            }
+        }
+    }
+
+    
+}
