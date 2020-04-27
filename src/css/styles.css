@@ -137,11 +137,14 @@ body #root {
 }
 body #root .App {
   margin: 0;
+}
+body #root .App div {
+  margin: 0;
   display: flex;
   flex-direction: column;
 }
-body #root .App footer {
-  padding-bottom: 10px;
+body #root .App div footer {
+  padding: 12px;
   font-family: "Indie Flower", cursive;
   font-family: "Coming Soon", cursive;
   font-family: "Chilanka", cursive;

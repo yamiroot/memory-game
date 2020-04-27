@@ -14,15 +14,19 @@ body {
         
         .App {
             margin: 0;
-            display: flex;
-            flex-direction: column;
+            
+            div {
+                margin: 0;
+                display: flex;
+                flex-direction: column;
 
-            footer {
-                padding-bottom: 10px;
-                font-family: 'Indie Flower', cursive;
-                font-family: 'Coming Soon', cursive;
-                font-family: 'Chilanka', cursive;
-                font-size: 18px;
+                footer {
+                    padding: 12px;
+                    font-family: 'Indie Flower', cursive;
+                    font-family: 'Coming Soon', cursive;
+                    font-family: 'Chilanka', cursive;
+                    font-size: 18px;
+                }
             }
         }
     }
