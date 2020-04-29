@@ -1,3 +1,13 @@
+import ImgTerramar from '../img/cuentos-de-terramar.jpg';
+import ImgCastillo from '../img/el-castillo-ambulante.jpg';
+import ImgChijiro from '../img/el-viaje-de-chijiro.jpg';
+import ImgMononoke from '../img/la-princesa-mononoke.jpg';
+import ImgLuciernagas from '../img/la-tumba-de-las-luciernagas.jpg';
+import ImgTotoro from '../img/mi-vecino-totoro.jpg';
+import ImgYamada from '../img/mis-vecinos-los-yamada.jpg';
+import ImgSusurros from '../img/susurros-del-corazon.jpg';
+
+
 /* Data de los cards */
 
 // La ruta de las imágenes se obtuvo importando cada imagen y
@@ -5,67 +15,67 @@
 
 
 export default [{
-  url: '/static/media/cuentos-de-terramar.f2879c73.jpg',
+  url: ImgTerramar,
   id: 'img01',
   alt: 'Cuentos de Terramar',
 }, {
-  url: '/static/media/el-castillo-ambulante.c97792fb.jpg',
+  url: ImgCastillo,
   id: 'img02',
   alt: 'El castillo ambulante',
 }, {
-  url: '/static/media/el-viaje-de-chijiro.9fa7ea9d.jpg',
+  url: ImgChijiro,
   id: 'img03',
   alt: 'El viaje de Chijiro',
 }, {
-  url: '/static/media/la-princesa-mononoke.1b826e0e.jpg',
+  url: ImgMononoke,
   id: 'img04',
   alt: 'La princesa Mononoke',
 }, {
-  url: '/static/media/la-tumba-de-las-luciernagas.e04fa394.jpg',
+  url: ImgLuciernagas,
   id: 'img05',
   alt: 'La tumba de las luciérnagas',
 }, {
-  url: '/static/media/mi-vecino-totoro.39f14cb1.jpg',
+  url: ImgTotoro,
   id: 'img06',
   alt: 'Mi vecino Totoro',
 }, {
-  url: '/static/media/mis-vecinos-los-yamada.7bda1f50.jpg',
+  url: ImgYamada,
   id: 'img07',
   alt: 'Mis vecinos Los Yamada',
 }, {
-  url: '/static/media/susurros-del-corazon.f9096228.jpg',
+  url: ImgSusurros,
   id: 'img08',
   alt: 'Susurros del corazón',
 }, {
-  url: '/static/media/cuentos-de-terramar.f2879c73.jpg',
+  url: ImgTerramar,
   id: 'img09',
   alt: 'Cuentos de Terramar',
 }, {
-  url: '/static/media/el-castillo-ambulante.c97792fb.jpg',
+  url: ImgCastillo,
   id: 'img10',
   alt: 'El castillo ambulante',
 }, {
-  url: '/static/media/el-viaje-de-chijiro.9fa7ea9d.jpg',
+  url: ImgChijiro,
   id: 'img11',
   alt: 'El viaje de Chijiro',
 }, {
-  url: '/static/media/la-princesa-mononoke.1b826e0e.jpg',
+  url: ImgMononoke,
   id: 'img12',
   alt: 'La princesa Mononoke',
 }, {
-  url: '/static/media/la-tumba-de-las-luciernagas.e04fa394.jpg',
+  url: ImgLuciernagas,
   id: 'img13',
   alt: 'La tumba de las luciérnagas',
 }, {
-  url: '/static/media/mi-vecino-totoro.39f14cb1.jpg',
+  url: ImgTotoro,
   id: 'img14',
   alt: 'Mi vecino Totoro',
 }, {
-  url: '/static/media/mis-vecinos-los-yamada.7bda1f50.jpg',
+  url: ImgYamada,
   id: 'img15',
   alt: 'Mis vecinos Los Yamada',
 }, {
-  url: '/static/media/susurros-del-corazon.f9096228.jpg',
+  url: ImgSusurros,
   id: 'img16',
   alt: 'Susurros del corazón',
 }];

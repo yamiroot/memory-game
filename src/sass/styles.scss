@@ -4,28 +4,34 @@
 @import '_pageerror';
 
 
-body {
+* {
     margin: 0;
     padding: 0;
-    background: #fffb95;
+    box-sizing: border-box;
+    /* display: flex; */
 
-    #root {
-        margin: 0;
+    body {
+        height: 100vh;
+        background: #fffb95;
         
-        .App {
+        #root {
             margin: 0;
             
-            div {
+            .App {
                 margin: 0;
-                display: flex;
-                flex-direction: column;
-
-                footer {
-                    padding: 12px;
-                    font-family: 'Indie Flower', cursive;
-                    font-family: 'Coming Soon', cursive;
-                    font-family: 'Chilanka', cursive;
-                    font-size: 18px;
+                
+                div {
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+    
+                    footer {
+                        padding: 12px;
+                        font-family: 'Indie Flower', cursive;
+                        font-family: 'Coming Soon', cursive;
+                        font-family: 'Chilanka', cursive;
+                        font-size: 18px;
+                    }
                 }
             }
         }
