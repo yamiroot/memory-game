@@ -12,18 +12,19 @@
 
 // min-width: Cuando el ancho del dispositivo sea mayor o igual a la medida 
 // especificada.
+// max-width: para todos los anchos de las pantallas que sean menores o iguales a 1024px.
 
 footer {
 
     @media (max-width: $blackberry) {
         @include style(5px, 12px);
-     }
+    }
     @media (min-width: $blackberry) and (max-width: $smartphone) {
         @include style(8px, 14px);
-     }
+    }
     @media (min-width: $smartphone) and (max-width: $tablet) {
         @include style(11px, 16px);
-     }
+    }
     @media (min-width: $tablet) and (max-width: $desktop) {
         @include style(14px, 18px);
     }

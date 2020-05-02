@@ -1,12 +1,68 @@
-header {
-    height: 120px;
+@import '_measures';
+
+// outline: none : No se mostrará el contorno al hacer clic en el enlace.
+
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin button($marginRight, $fontSize) {
+    background: rgb(253, 212, 77);
+    border: 3px solid rgb(128, 128, 128);
+    border-radius: 10px;
+    color: black;
+    float: right;
+    margin-right: $marginRight;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Chilanka', cursive;
+    font-size: $fontSize;
+}
+
+
+header {    
     background: #ffe300;
     margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    #linkImgLogo {
+    @media (max-width: $blackberry) {
+        @include size(100%, 75px);
+
+        #linkImgLogo {
+            margin-left: 20px;
+            outline: none;
+    
+            img {   
+                @include size(75%, 45px);
+            }
+        }
+    
+        button {
+            @include size(100%, 40px);
+            @include button(20px, 10px);
+        }
+     }
+    /* @media (min-width: $blackberry) and (max-width: $smartphone) {
+        @include style(8px, 14px);
+     }
+    @media (min-width: $smartphone) and (max-width: $tablet) {
+        @include style(11px, 16px);
+     }
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        @include style(14px, 18px);
+    }
+    @media (min-width: $desktop) and (max-width: $smart) {
+        @include style(17px, 20px);
+    }
+    @media (min-width: $smart) {
+        @include style(21px, 22px);
+    } */
+
+/*     #linkImgLogo {
         margin-left: 60px;
 
         img {   
@@ -28,5 +84,5 @@ header {
         font-family: 'Coming Soon', cursive;
         font-family: 'Chilanka', cursive;
         font-size: 18px;
-    }
+    } */
 }
