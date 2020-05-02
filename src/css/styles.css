@@ -170,7 +170,6 @@ header button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* display: flex; */
 }
 * body {
   height: 100vh;
@@ -179,15 +178,12 @@ header button {
 * body #root {
   margin: 0;
 }
-* body #root .App {
-  margin: 0;
-}
-* body #root .App div {
+* body #root div {
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-* body #root .App div footer {
+* body #root div footer {
   padding: 12px;
   font-family: "Indie Flower", cursive;
   font-family: "Coming Soon", cursive;
