@@ -1,0 +1,36 @@
+@import '_measures';
+
+
+@mixin style($padding, $size) {
+    padding: $padding;
+    font-family: 'Indie Flower', cursive;                        
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Chilanka', cursive;
+    font-size: $size;
+}
+
+
+// min-width: Cuando el ancho del dispositivo sea mayor o igual a la medida 
+// especificada.
+
+footer {
+
+    @media (max-width: $blackberry) {
+        @include style(5px, 12px);
+     }
+    @media (min-width: $blackberry) and (max-width: $smartphone) {
+        @include style(8px, 14px);
+     }
+    @media (min-width: $smartphone) and (max-width: $tablet) {
+        @include style(11px, 16px);
+     }
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        @include style(14px, 18px);
+    }
+    @media (min-width: $desktop) and (max-width: $smart) {
+        @include style(17px, 20px);
+    }
+    @media (min-width: $smart) {
+        @include style(21px, 22px);
+    }
+}
