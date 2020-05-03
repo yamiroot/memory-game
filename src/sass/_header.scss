@@ -8,6 +8,12 @@
     height: $height;
 }
 
+@mixin link($marginLeft, $marginRigth) {
+    margin-left: $marginLeft;
+    margin-right: $marginRigth;
+    outline: none;
+}
+
 @mixin button($marginRight, $fontSize) {
     background: rgb(253, 212, 77);
     border: 3px solid rgb(128, 128, 128);
@@ -19,6 +25,7 @@
     font-family: 'Coming Soon', cursive;
     font-family: 'Chilanka', cursive;
     font-size: $fontSize;
+    outline: none;
 }
 
 
@@ -29,60 +36,93 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    a[href="/"], a[href="/gamecards"], a[href="/gamerules"] {
+        outline: none;
+    }
+
     @media (max-width: $blackberry) {
         @include size(100%, 75px);
 
-        #linkImgLogo {
+        img {   
+            @include size(70%, 45px);
             margin-left: 20px;
-            outline: none;
-    
-            img {   
-                @include size(75%, 45px);
-            }
         }
-    
+  
         button {
-            @include size(100%, 40px);
+            @include size(90%, 40px);
             @include button(20px, 10px);
         }
-     }
-    /* @media (min-width: $blackberry) and (max-width: $smartphone) {
-        @include style(8px, 14px);
-     }
-    @media (min-width: $smartphone) and (max-width: $tablet) {
-        @include style(11px, 16px);
-     }
-    @media (min-width: $tablet) and (max-width: $desktop) {
-        @include style(14px, 18px);
     }
-    @media (min-width: $desktop) and (max-width: $smart) {
-        @include style(17px, 20px);
-    }
-    @media (min-width: $smart) {
-        @include style(21px, 22px);
-    } */
 
-/*     #linkImgLogo {
-        margin-left: 60px;
+    @media (min-width: $blackberry) and (max-width: $smartphone) {
+        @include size(100%, 80px);
 
         img {   
-            width: 100%;
-            height: 90px;
+            @include size(73%, 47px);
+            margin-left: 22px;
+        }
+  
+        button {
+            @include size(93%, 42px);
+            @include button(22px, 11px);
+        }
+    }
+    
+    @media (min-width: $smartphone) and (max-width: $tablet) {
+        @include size(100%, 85px);
+
+        img {   
+            @include size(76%, 49px);
+            margin-left: 24px;
+        }
+  
+        button {
+            @include size(96%, 44px);
+            @include button(24px, 12px);
         }
     }
 
-    button {
-        width: 100%;
-        height: 60px;
-        border: 3px solid rgb(128, 128, 128);
-        border-radius: 10px;
-        background: rgb(253, 212, 77);
-        color: black;
-        float: right;
-        margin-right: 60px;
-        font-family: 'Indie Flower', cursive;
-        font-family: 'Coming Soon', cursive;
-        font-family: 'Chilanka', cursive;
-        font-size: 18px;
-    } */
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        @include size(100%, 90px);
+
+        img {   
+            @include size(79%, 51px);
+            margin-left: 26px;
+        }
+  
+        button {
+            @include size(99%, 46px);
+            @include button(26px, 14px);
+        }
+    }
+
+    
+    @media (min-width: $desktop) and (max-width: $smart) {
+        @include size(100%, 95px);
+
+        img {   
+            @include size(82%, 53px);
+            margin-left: 28px;
+        }
+  
+        button {
+            @include size(100%, 48px);
+            @include button(28px, 16px);
+        }
+    }
+
+    
+    @media (min-width: $smart) {
+        @include size(100%, 100px);
+
+        img {   
+            @include size(85%, 55px);
+            margin-left: 30px;
+        }
+  
+        button {
+            @include size(100%, 50px);
+            @include button(30px, 18px);
+        }
+    } 
 }

@@ -8,9 +8,9 @@ const Header = ({ hide }) => {
   if (hide) {
     return (
       <header className="Header">
-        <a href="./" id="linkImgLogo">
+        <Link to="/gamecards">
           <img src={ImgLogo} alt="Logo de juego Memory Game" />
-        </a>
+        </Link>
         <Link to="/gamecards">
           <button type="button">Volver al juego</button>
         </Link>
@@ -20,9 +20,9 @@ const Header = ({ hide }) => {
 
   return (
     <header className="Header">
-      <a href="./" id="linkImgLogo">
+      <Link to="/">
         <img src={ImgLogo} alt="Logo de juego Memory Game" />
-      </a>
+      </Link>
       <Link to="/gamerules">
         <button type="button">Reglas del juego</button>
       </Link>

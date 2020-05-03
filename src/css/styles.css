@@ -1,117 +1,25 @@
-/* @mixin style($width, $height, $margin) {
-    width: $width;
-    height: $height;
-    margin: $margin;
-}
- */
-/* #view-section {
-    width: 100%;
-
-    .Home-body {
-        width: 100%;
-
-        #container-products {
-            padding: 3px 20px 3px 20px; 
-            align-items: center;
-
-            @include style(100%, auto, 0);
-
-            li{
-                display: -webkit-inline-box;
-                margin-right: 7px;
-            }
-
-            #ItemProduct {
-                display: flex; 
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-
-                @include style(150px, 288px, 2px 15px 2px 15px);
-
-                img {
-                   display: flex;
-                   justify-content: center;
-
-                   @include style(300px, 300px, 5px);
-
-                   @media (max-width: $smartphone) {
-                       width: 150px;
-                       height: 150px;
-                    }
-                   @media (min-width: $smartphone) and (max-width: $tablet) {
-                       width: 45%;
-                       height: 65px;
-                    }
-                   @media (min-width: $tablet) and (max-width: $desktop) {
-                       width: 50%;
-                       height: 75px;
-                    }
-                    @media (min-width: $desktop) {
-                       width: 55%;
-                       height: 75px;
-                    }
-                } */
 header {
   background: #ffe300;
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* @media (min-width: $blackberry) and (max-width: $smartphone) {
-      @include style(8px, 14px);
-   }
-  @media (min-width: $smartphone) and (max-width: $tablet) {
-      @include style(11px, 16px);
-   }
-  @media (min-width: $tablet) and (max-width: $desktop) {
-      @include style(14px, 18px);
-  }
-  @media (min-width: $desktop) and (max-width: $smart) {
-      @include style(17px, 20px);
-  }
-  @media (min-width: $smart) {
-      @include style(21px, 22px);
-  } */
-  /*     #linkImgLogo {
-          margin-left: 60px;
-
-          img {   
-              width: 100%;
-              height: 90px;
-          }
-      }
-
-      button {
-          width: 100%;
-          height: 60px;
-          border: 3px solid rgb(128, 128, 128);
-          border-radius: 10px;
-          background: rgb(253, 212, 77);
-          color: black;
-          float: right;
-          margin-right: 60px;
-          font-family: 'Indie Flower', cursive;
-          font-family: 'Coming Soon', cursive;
-          font-family: 'Chilanka', cursive;
-          font-size: 18px;
-      } */
+}
+header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
+  outline: none;
 }
 @media (max-width: 320px) {
   header {
     width: 100%;
     height: 75px;
   }
-  header #linkImgLogo {
-    margin-left: 20px;
-    outline: none;
-  }
-  header #linkImgLogo img {
-    width: 75%;
+  header img {
+    width: 70%;
     height: 45px;
+    margin-left: 20px;
   }
   header button {
-    width: 100%;
+    width: 90%;
     height: 40px;
     background: #fdd44d;
     border: 3px solid gray;
@@ -123,6 +31,136 @@ header {
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
     font-size: 10px;
+    outline: none;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  header {
+    width: 100%;
+    height: 80px;
+  }
+  header img {
+    width: 73%;
+    height: 47px;
+    margin-left: 22px;
+  }
+  header button {
+    width: 93%;
+    height: 42px;
+    background: #fdd44d;
+    border: 3px solid gray;
+    border-radius: 10px;
+    color: black;
+    float: right;
+    margin-right: 22px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 11px;
+    outline: none;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  header {
+    width: 100%;
+    height: 85px;
+  }
+  header img {
+    width: 76%;
+    height: 49px;
+    margin-left: 24px;
+  }
+  header button {
+    width: 96%;
+    height: 44px;
+    background: #fdd44d;
+    border: 3px solid gray;
+    border-radius: 10px;
+    color: black;
+    float: right;
+    margin-right: 24px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 12px;
+    outline: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  header {
+    width: 100%;
+    height: 90px;
+  }
+  header img {
+    width: 79%;
+    height: 51px;
+    margin-left: 26px;
+  }
+  header button {
+    width: 99%;
+    height: 46px;
+    background: #fdd44d;
+    border: 3px solid gray;
+    border-radius: 10px;
+    color: black;
+    float: right;
+    margin-right: 26px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 14px;
+    outline: none;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  header {
+    width: 100%;
+    height: 95px;
+  }
+  header img {
+    width: 82%;
+    height: 53px;
+    margin-left: 28px;
+  }
+  header button {
+    width: 100%;
+    height: 48px;
+    background: #fdd44d;
+    border: 3px solid gray;
+    border-radius: 10px;
+    color: black;
+    float: right;
+    margin-right: 28px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 16px;
+    outline: none;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    width: 100%;
+    height: 100px;
+  }
+  header img {
+    width: 85%;
+    height: 55px;
+    margin-left: 30px;
+  }
+  header button {
+    width: 100%;
+    height: 50px;
+    background: #fdd44d;
+    border: 3px solid gray;
+    border-radius: 10px;
+    color: black;
+    float: right;
+    margin-right: 30px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 18px;
     outline: none;
   }
 }
@@ -265,60 +303,6 @@ header {
   font-size: 22px;
 }
 
-/* @mixin style($width, $height, $margin) {
-    width: $width;
-    height: $height;
-    margin: $margin;
-}
- */
-/* #view-section {
-    width: 100%;
-
-    .Home-body {
-        width: 100%;
-
-        #container-products {
-            padding: 3px 20px 3px 20px; 
-            align-items: center;
-
-            @include style(100%, auto, 0);
-
-            li{
-                display: -webkit-inline-box;
-                margin-right: 7px;
-            }
-
-            #ItemProduct {
-                display: flex; 
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-
-                @include style(150px, 288px, 2px 15px 2px 15px);
-
-                img {
-                   display: flex;
-                   justify-content: center;
-
-                   @include style(300px, 300px, 5px);
-
-                   @media (max-width: $smartphone) {
-                       width: 150px;
-                       height: 150px;
-                    }
-                   @media (min-width: $smartphone) and (max-width: $tablet) {
-                       width: 45%;
-                       height: 65px;
-                    }
-                   @media (min-width: $tablet) and (max-width: $desktop) {
-                       width: 50%;
-                       height: 75px;
-                    }
-                    @media (min-width: $desktop) {
-                       width: 55%;
-                       height: 75px;
-                    }
-                } */
 @media (max-width: 320px) {
   footer {
     padding: 5px;
@@ -330,47 +314,47 @@ header {
 }
 @media (min-width: 320px) and (max-width: 480px) {
   footer {
-    padding: 8px;
+    padding: 6px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 13px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  footer {
+    padding: 7px;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
     font-size: 14px;
   }
 }
-@media (min-width: 480px) and (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   footer {
-    padding: 11px;
+    padding: 8px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 15px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  footer {
+    padding: 9px;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
     font-size: 16px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-  footer {
-    padding: 14px;
-    font-family: "Indie Flower", cursive;
-    font-family: "Coming Soon", cursive;
-    font-family: "Chilanka", cursive;
-    font-size: 18px;
-  }
-}
-@media (min-width: 1024px) and (max-width: 1200px) {
-  footer {
-    padding: 17px;
-    font-family: "Indie Flower", cursive;
-    font-family: "Coming Soon", cursive;
-    font-family: "Chilanka", cursive;
-    font-size: 20px;
-  }
-}
 @media (min-width: 1200px) {
   footer {
-    padding: 21px;
+    padding: 10px;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 22px;
+    font-size: 17px;
   }
 }
 
