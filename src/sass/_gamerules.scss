@@ -1,11 +1,81 @@
-.GameRules{
+@import '_measures';
+
+
+@mixin style($flexDirection,$padding, $margin) {
     display: flex;
+    flex-direction: $flexDirection;
+    justify-content: center;
+    align-items: center;
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+@mixin text($size) {
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Chilanka', cursive;
+    font-size: $size;
+}
+
+
+.GameRules{
+    /* display: flex;
     padding: 40px;
     margin: 0;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 
+    @media (max-width: $blackberry) {
+        @include style(column, 5px, 0);
+
+        h2 {
+            @include text(16px);
+            margin-top: 25px;
+        }
+
+        section {
+            @include style(column, 5px, 0);
+
+            article {
+                @include size(80%, auto);
+                @include style(column, 0, 3px);
+                @include text(12px);
+
+                img{
+                    @include size(20%, auto); 
+                }
+
+                h4 {
+                    @include text(14px);
+                }
+            }
+        }
+    }
+    /* @media (min-width: $blackberry) and (max-width: $smartphone) {
+        @include style(6px, 13px);
+    }
+    @media (min-width: $smartphone) and (max-width: $tablet) {
+        @include style(7px, 14px);
+    }
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        @include style(8px, 15px);
+    }
+    @media (min-width: $desktop) and (max-width: $smart) {
+        @include style(9px, 16px);
+    }
+    @media (min-width: $smart) {
+        @include style(10px, 17px);
+    } */
+
+/* 
     h2{
         font-family: 'Indie Flower', cursive;
         font-family: 'Coming Soon', cursive;
@@ -36,7 +106,5 @@
                 margin: 7px;
             }
         }
-    }
-
-    
+    } */
 }
