@@ -10,7 +10,7 @@ const GameRules = () => (
   <div>
     <Header hide />
     <main className="GameRules">
-      <h2 className="font-weight-bolder">Reglas y especificaciones del juego</h2>
+      <h2 className="font-weight-bolder text-center">Reglas y especificaciones del juego</h2>
       <section>
         <article>
           <img src={ImgUno} alt="Step One" />

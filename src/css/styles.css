@@ -232,61 +232,6 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
   transform: rotateY(180deg);
 }
 
-.GameRules {
-  /* display: flex;
-  padding: 40px;
-  margin: 0;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
-  /* @media (min-width: $blackberry) and (max-width: $smartphone) {
-      @include style(6px, 13px);
-  }
-  @media (min-width: $smartphone) and (max-width: $tablet) {
-      @include style(7px, 14px);
-  }
-  @media (min-width: $tablet) and (max-width: $desktop) {
-      @include style(8px, 15px);
-  }
-  @media (min-width: $desktop) and (max-width: $smart) {
-      @include style(9px, 16px);
-  }
-  @media (min-width: $smart) {
-      @include style(10px, 17px);
-  } */
-  /* 
-      h2{
-          font-family: 'Indie Flower', cursive;
-          font-family: 'Coming Soon', cursive;
-          font-family: 'Chilanka', cursive;
-          margin: 20px;
-      }
-
-      section {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-
-          article {
-              width: 30%;
-              margin: 15px;
-              padding: 0px 15px 20px 15px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              font-family: 'Indie Flower', cursive;
-              font-family: 'Coming Soon', cursive;
-              font-family: 'Chilanka', cursive;
-              font-size: 18px;
-
-              img, h4, p, ul {
-                  margin: 7px;
-              }
-          }
-      } */
-}
 @media (max-width: 320px) {
   .GameRules {
     display: flex;
@@ -301,7 +246,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
     font-size: 16px;
-    margin-top: 25px;
+    margin: 25px 4% 2px 4%;
   }
   .GameRules section {
     display: flex;
@@ -323,7 +268,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 12px;
+    font-size: 11px;
   }
   .GameRules section article img {
     width: 20%;
@@ -333,7 +278,257 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 14px;
+    font-size: 13px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .GameRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    margin: 0;
+  }
+  .GameRules h2 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 18px;
+    margin: 27px 6% 4px 6%;
+  }
+  .GameRules section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .GameRules section article {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 8px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 12px;
+  }
+  .GameRules section article img {
+    width: 22%;
+    height: auto;
+  }
+  .GameRules section article h4 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 13px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .GameRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    margin: 0;
+  }
+  .GameRules h2 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 21px;
+    margin: 29px 8% 6px 8%;
+  }
+  .GameRules section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .GameRules section article {
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 13px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 13px;
+  }
+  .GameRules section article img {
+    width: 22%;
+    height: auto;
+  }
+  .GameRules section article h4 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .GameRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 0;
+  }
+  .GameRules h2 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 24px;
+    margin: 31px 10% 8px 10%;
+  }
+  .GameRules section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .GameRules section article {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 10px 10px 10px 10px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 15px;
+  }
+  .GameRules section article img {
+    width: 22%;
+    height: auto;
+  }
+  .GameRules section article h4 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .GameRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    margin: 0;
+  }
+  .GameRules h2 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 27px;
+    margin: 33px 12% 10px 12%;
+  }
+  .GameRules section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .GameRules section article {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin: 12px 13px 12px 13px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 16px;
+  }
+  .GameRules section article img {
+    width: 22%;
+    height: auto;
+  }
+  .GameRules section article h4 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  .GameRules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+  }
+  .GameRules h2 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 30px;
+    margin: 35px 14% 12px 14%;
+  }
+  .GameRules section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 0;
+    flex-wrap: wrap;
+  }
+  .GameRules section article {
+    width: 30%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 14px 15px 14px 15px;
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 18px;
+  }
+  .GameRules section article img {
+    width: 22%;
+    height: auto;
+  }
+  .GameRules section article h4 {
+    font-family: "Indie Flower", cursive;
+    font-family: "Coming Soon", cursive;
+    font-family: "Chilanka", cursive;
+    font-size: 23px;
   }
 }
 
@@ -373,7 +568,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
 
 @media (max-width: 320px) {
   footer {
-    padding: 5px;
+    padding: 5px 6% 5px 6%;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -382,7 +577,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
 }
 @media (min-width: 320px) and (max-width: 480px) {
   footer {
-    padding: 6px;
+    padding: 6px 8% 6px 8%;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -391,7 +586,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
 }
 @media (min-width: 480px) and (max-width: 768px) {
   footer {
-    padding: 7px;
+    padding: 7px 10% 7px 10%;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -400,7 +595,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   footer {
-    padding: 8px;
+    padding: 8px 12% 8px 12%;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -409,7 +604,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   footer {
-    padding: 9px;
+    padding: 9px 14% 9px 14%;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -418,7 +613,7 @@ header a[href="/"], header a[href="/gamecards"], header a[href="/gamerules"] {
 }
 @media (min-width: 1200px) {
   footer {
-    padding: 10px;
+    padding: 10px 16% 10px 16%;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;

@@ -1,7 +1,7 @@
 @import '_measures';
 
 
-@mixin style($flexDirection,$padding, $margin) {
+@mixin style($flexDirection, $padding, $margin) {
     display: flex;
     flex-direction: $flexDirection;
     justify-content: center;
@@ -26,19 +26,13 @@
 
 
 .GameRules{
-    /* display: flex;
-    padding: 40px;
-    margin: 0;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
 
     @media (max-width: $blackberry) {
         @include style(column, 5px, 0);
 
         h2 {
             @include text(16px);
-            margin-top: 25px;
+            margin: 25px 4% 2px 4%;
         }
 
         section {
@@ -47,64 +41,156 @@
             article {
                 @include size(80%, auto);
                 @include style(column, 0, 3px);
-                @include text(12px);
+                @include text(11px);
 
                 img{
                     @include size(20%, auto); 
                 }
 
                 h4 {
-                    @include text(14px);
+                    @include text(13px);
                 }
             }
         }
     }
-    /* @media (min-width: $blackberry) and (max-width: $smartphone) {
-        @include style(6px, 13px);
-    }
-    @media (min-width: $smartphone) and (max-width: $tablet) {
-        @include style(7px, 14px);
-    }
-    @media (min-width: $tablet) and (max-width: $desktop) {
-        @include style(8px, 15px);
-    }
-    @media (min-width: $desktop) and (max-width: $smart) {
-        @include style(9px, 16px);
-    }
-    @media (min-width: $smart) {
-        @include style(10px, 17px);
-    } */
-
-/* 
-    h2{
-        font-family: 'Indie Flower', cursive;
-        font-family: 'Coming Soon', cursive;
-        font-family: 'Chilanka', cursive;
-        margin: 20px;
-    }
-
-    section {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-
-        article {
-            width: 30%;
-            margin: 15px;
-            padding: 0px 15px 20px 15px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Indie Flower', cursive;
-            font-family: 'Coming Soon', cursive;
-            font-family: 'Chilanka', cursive;
-            font-size: 18px;
     
-            img, h4, p, ul {
-                margin: 7px;
+    @media (min-width: $blackberry) and (max-width: $smartphone) {
+        @include style(column, 6px, 0);
+
+        h2 {
+            @include text(18px);
+            margin: 27px 6% 4px 6%;
+        }
+
+        section {
+            @include style(column, 7px, 0);
+            flex-wrap: wrap;
+
+            article {
+                @include size(70%, auto);
+                @include style(column, 0, 8px);
+                @include text(12px);
+
+                img{
+                    @include size(22%, auto); 
+                }
+
+                h4 {
+                    @include text(13px);
+                }
             }
         }
-    } */
+    }
+
+    @media (min-width: $smartphone) and (max-width: $tablet) {
+        @include style(column, 7px, 0);
+
+        h2 {
+            @include text(21px);
+            margin: 29px 8% 6px 8%;
+        }
+
+        section {
+            @include style(column, 9px, 0);
+            flex-wrap: wrap;
+
+            article {
+                @include size(60%, auto);
+                @include style(column, 0, 13px);
+                @include text(13px);
+
+                img{
+                    @include size(22%, auto); 
+                }
+
+                h4 {
+                    @include text(15px);
+                }
+            }
+        }
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        @include style(column, 8px, 0);
+
+        h2 {
+            @include text(24px);
+            margin: 31px 10% 8px 10%;
+        }
+
+        section {
+            @include style(row, 11px, 0);
+            flex-wrap: wrap;
+
+            article {
+                @include size(40%, auto);
+                @include style(column, 0, 10px 10px 10px 10px);
+                @include text(15px);
+
+                img{
+                    @include size(22%, auto); 
+                }
+
+                h4 {
+                    @include text(16px);
+                }
+            }
+        }
+    }
+
+    @media (min-width: $desktop) and (max-width: $smart) {
+        @include style(column, 9px, 0);
+
+        h2 {
+            @include text(27px);
+            margin: 33px 12% 10px 12%;
+        }
+
+        section {
+            @include style(row, 13px, 0);
+            flex-wrap: wrap;
+
+            article {
+                @include size(30%, auto);
+                @include style(column, 8px, 12px 13px 12px 13px);
+                @include text(16px);
+
+                img{
+                    @include size(22%, auto); 
+                }
+
+                h4 {
+                    @include text(21px);
+                }
+            }
+        }
+    }
+
+    @media (min-width: $smart) {
+        @include style(column, 10px, 0);
+
+        h2 {
+            @include text(30px);
+            margin: 35px 14% 12px 14%;
+        }
+
+        section {
+            @include style(row, 15px, 0);
+            flex-wrap: wrap;
+
+            article {
+                @include size(30%, auto);
+                @include style(column, 15px, 14px 15px 14px 15px);
+                @include text(18px);
+
+                img{
+                    @include size(22%, auto); 
+                }
+
+                h4 {
+                    @include text(23px);
+                }
+            }
+        }
+    }
 }
