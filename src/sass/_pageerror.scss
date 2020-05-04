@@ -1,5 +1,38 @@
-.PageError {
+@import '_measures';
+
+
+@mixin style($flexDirection, $padding, $margin) {
     display: flex;
+    flex-direction: $flexDirection;
+    justify-content: center;
+    align-items: center;
+    padding: $padding;
+    margin: $margin;
+}
+
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+@mixin titleError($size) {
+    font-family: 'Bungee Shade', cursive;
+    font-size: $size;
+}
+
+
+@mixin text($size) {
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Coming Soon', cursive;
+    font-family: 'Chilanka', cursive;
+    font-size: $size;
+}
+
+
+.PageError {
+  /*   display: flex;
     padding: 60px;
     margin: 0px;
     padding: 60px;
@@ -34,5 +67,149 @@
             font-family: 'Chilanka', cursive;
             font-size: 22px;
         }
+    } */
+
+    @media (max-width: $blackberry) {
+        @include style(column, 20px, 0);
+
+        img {
+            @include size(25%, auto);
+            margin: 15px;
+        }
+    
+        section {
+            @include style(column, 10px, 0);
+            @include size(60%, auto);
+
+            h1 {
+                @include titleError(50px);
+                margin: 5px auto 5px auto;
+            }
+        
+            p {
+                @include text(12px);
+                margin: 10px;
+            }
+        }
     }
+
+    @media (min-width: $blackberry) and (max-width: $smartphone) {
+        @include style(column, 25px, 0);
+
+        img {
+            @include size(30%, auto);
+            margin: 16px;
+        }
+    
+        section {
+            @include style(column, 12px, 0);
+            @include size(65%, auto);
+
+            h1 {
+                @include titleError(65px);
+                margin: 8px auto 8px auto;
+            }
+        
+            p {
+                @include text(14px);
+                margin: 12px;
+            }
+        }
+    }
+
+    @media (min-width: $smartphone) and (max-width: $tablet) {
+        @include style(row, 35px, 0);
+
+        img {
+            @include size(40%, auto);
+            margin: 17px;
+        }
+    
+        section {
+            @include style(column, 14px, 0);
+            @include size(70%, auto);
+
+            h1 {
+                @include titleError(80px);
+                margin: 11px auto 11px auto;
+            }
+        
+            p {
+                @include text(16px);
+                margin: 14px;
+            }
+        }
+    }
+
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        @include style(row, 40px, 0);
+
+        img {
+            @include size(37%, auto);
+            margin: 18px;
+        }
+    
+        section {
+            @include style(column, 16px, 0);
+            @include size(40%, auto);
+
+            h1 {
+                @include titleError(95px);
+                margin: 14px auto 14px auto;
+            }
+        
+            p {
+                @include text(18px);
+                margin: 16px;
+            }
+        }
+    }
+
+    @media (min-width: $desktop) and (max-width: $smart) {
+        @include style(row, 45px, 0);
+
+        img {
+            @include size(34%, auto);
+            margin: 19px;
+        }
+    
+        section {
+            @include style(column, 18px, 0);
+            @include size(40%, auto);
+
+            h1 {
+                @include titleError(110px);
+                margin: 17px auto 17px auto;
+            }
+        
+            p {
+                @include text(20px);
+                margin: 18px;
+            }
+        }
+    }
+
+    @media (min-width: $smart) {
+        @include style(row, 50px, 0);
+
+        img {
+            @include size(31%, auto);
+            margin: 20px;
+        }
+    
+        section {
+            @include style(column, 20px, 0);
+            @include size(40%, auto);
+
+            h1 {
+                @include titleError(125px);
+                margin: 20px auto 20px auto;
+            }
+        
+            p {
+                @include text(22px);
+                margin: 20px;
+            }
+        }
+    } 
 }
