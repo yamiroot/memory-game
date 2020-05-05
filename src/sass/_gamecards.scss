@@ -1,24 +1,120 @@
-.Game{
+@import '_measures';
+
+
+@mixin styleFlex() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin styleGrid() {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    justify-items: center;
+    perspective: 1000px;
+}
+
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+
+@mixin paddingMargin($padding, $margin) {
+    padding: $padding;
+    margin: $margin;
+}
+
+
+// perspective: Determina la distancia entre el plano z=0 y el usuario 
+// para dar algo de perspectiva al elemento 3D posicionado. Es decir, 
+// nos ayudará a crear un efecto más realista en la animación invertida.
+
+// display: grid : Establece una cuadrícula con ítems en bloque, de forma 
+// equivalente a block.
+
+// grid-template-columns: Establece el tamaño de cada columna.
+
+// repeat([núm de veces], [valor o valores]): Representa un fragmento repetido 
+// de la lista, permitiendo un gran número de columnas o filas que exhiben un 
+// patrón recurrente.
+// Parámetros: 
+// - 1er parámetro: Número de repeticiones.
+// - 2do parámetro: Tamaño. Ancho del elemento.
+
+// minmax(min, max): Define un rango de tamaño mayor o igual que min y menor o 
+// igual que max. Se emplea con rejillas CSS.
+
+// justify-items: Alinea cada celda o área dentro del grid container.
+
+// fr(fraction): Simboliza una fracción de espacio restante en el grid.
+
+// position: Especifica cómo un elemento es posicionado en el documento.
+// - relative: El elemento es posicionado de acuerdo al flujo normal del 
+// documento. Es decir se le asigna la posición por defecto.
+// - absolute: El elemento no estará dentro del flujo normal de la página y
+// tomará como referencia la ventana del navegador o el elemento posicionado 
+// (que tenga cualquier valor de position excepto static) más cercano si es 
+// el padre del elemento que queremos posicionar.
+
+// transform: Aplica una transformación 2D o 3D a un elemento. Esta propiedad
+// le permite rotar, escalar, mover, sesgar, etc., elementos.
+
+// scale(): Define una transformación que modifica el tamaño de un elemento 
+// en el plano 2D. Se especifica con uno o dos valores, que representan la 
+// cantidad de escala que se aplicará en cada dirección.
+// Sintaxis: scale(sx), scale(sx, sy)
+// Parámetros:
+// sx: Es un número representando la abscisa del vector de escala.
+// sy: Es un número representado la ordenada de la escala del vector. 
+
+// transform-style: Especifica cómo se representan los elementos hijos en el
+// espacio 3D.
+// Nota: Esta propiedad debe usarse junto con la propiedad transform.
+// Valores: flat | preserve-3d | initial | inherit
+// - preserve-3d: Especifica que los elementos hijos conservarán su posición 3D.
+
+// transition: Permite cambiar los valores de las propiedades sin problemas, durante
+// una duración determinada. Para crear una transición debe especificar lo siguiente:
+// - El efecto que desea agregar.
+// - La duración del efecto.
+// Nota: Si no se especifica la parte de duración, la transición no tendrá efecto, 
+// porque el valor predeterminado es 0.
+
+// backface-visibility: Determina si la cara posterior de un elemento es visible de
+// frente al usuario. La cara posterior de un elemento siempre es un fondo transpa-
+// rente, permitiendo, cuando es visible, que se muestre una imagen espejo de la 
+// cara frontal.
+// Valores: visible | hidden
+// - visible: La cara posterior es visible, permitiendo que la cara frontal se muestre 
+// invertida.
+// - hidden: La cara posterior no es visible, ocultando la cara frontal.
+
+// rotateY(): Permite rotar un elemento sobre el eje Y en un espacio tridimensional. 
+
+
+.Game {
     display: flex;
     padding: 15px;
     margin: 0;
 
     section {
-        width: 60%;
-        display: grid;
+        width: auto;
         margin: 35px auto 35px auto;
-        grid-template-columns: repeat(4, minmax(100px, 1fr));
+        display: grid;
+        grid-template-columns: repeat(4, minmax(100px, 1fr)); 
         justify-items: center;
-        perspective: 1000px;
+        perspective: 1000px; 
 
         article {
+            /* display: flex; */
             width: 90%;
             height: 120px;
-            cursor: pointer;
-            display: flex;
             margin: 5px;
+            cursor: pointer;
             border-radius: 12px;
-            border: 6px solid #f9af00b3;
             position: relative;
             transform: scale(1);
             transform-style: preserve-3d;
@@ -44,11 +140,12 @@
                 position: absolute;
                 backface-visibility: hidden;
                 transform: rotateY(180deg);
+                border: 6px solid #f9af00b3;
 
                 img {
                     width: 100%;
                     height: 100%;
-                    border-radius: 7px;
+                    border-radius: 2px;
                 }
             }
 
@@ -57,13 +154,12 @@
                 height: 100%;
                 border-radius: 7px;
                 background: #ffec55a6;
-                position: absolute;
-                backface-visibility: hidden;
+                border: 6px solid #f9af00b3;
+                
 
                 img {
                     width: 100%;
                     height: 100%;
-                    border-radius: 7px;
                 }
             }
         }
@@ -72,4 +168,23 @@
             transform: rotateY(180deg);
         }
     }
+
+ /*    @media (max-width: $blackberry) {
+        @include style(5px 6% 5px 6%, 11px);
+    }
+    @media (min-width: $blackberry) and (max-width: $smartphone) {
+        @include style(6px 8% 6px 8%, 12px);
+    }
+    @media (min-width: $smartphone) and (max-width: $tablet) {
+        @include style(7px 10% 7px 10%, 13px);
+    }
+    @media (min-width: $tablet) and (max-width: $desktop) {
+        @include style(8px 12% 8px 12%, 14px);
+    }
+    @media (min-width: $desktop) and (max-width: $smart) {
+        @include style(9px 14% 9px 14%, 15px);
+    }
+    @media (min-width: $smart) {
+        @include style(10px 16% 10px 16%, 16px);
+    } */
 }

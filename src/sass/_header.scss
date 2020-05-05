@@ -36,7 +36,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    a[href="/"], a[href="/gamecards"], a[href="/gamerules"] {
+    a {
         outline: none;
     }
 
@@ -48,7 +48,7 @@ header {
             margin-left: 20px;
         }
   
-        button {
+        button[type="button"] {
             @include size(90%, 40px);
             @include button(20px, 10px);
         }
@@ -62,7 +62,7 @@ header {
             margin-left: 22px;
         }
   
-        button {
+        button[type="button"] {
             @include size(93%, 42px);
             @include button(22px, 11px);
         }
@@ -76,7 +76,7 @@ header {
             margin-left: 24px;
         }
   
-        button {
+        button[type="button"] {
             @include size(96%, 44px);
             @include button(24px, 12px);
         }
@@ -90,7 +90,7 @@ header {
             margin-left: 26px;
         }
   
-        button {
+        button[type="button"] {
             @include size(99%, 46px);
             @include button(26px, 14px);
         }
@@ -105,7 +105,7 @@ header {
             margin-left: 28px;
         }
   
-        button {
+        button[type="button"] {
             @include size(100%, 48px);
             @include button(28px, 16px);
         }
@@ -120,7 +120,7 @@ header {
             margin-left: 30px;
         }
   
-        button {
+        button[type="button"] {
             @include size(100%, 50px);
             @include button(30px, 18px);
         }
