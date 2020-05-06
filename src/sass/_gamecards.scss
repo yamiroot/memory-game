@@ -167,6 +167,10 @@
         .flip {
             transform: rotateY(180deg);
         }
+
+        .hidden {
+            visibility: hidden;
+        }
     }
 
  /*    @media (max-width: $blackberry) {

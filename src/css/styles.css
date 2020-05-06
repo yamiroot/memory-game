@@ -189,7 +189,7 @@ header a {
      } */
 }
 .Game section {
-  width: 60%;
+  width: auto;
   margin: 35px auto 35px auto;
   display: grid;
   grid-template-columns: repeat(4, minmax(100px, 1fr));
@@ -231,7 +231,7 @@ header a {
 .Game section article .front-face img {
   width: 100%;
   height: 100%;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 .Game section article .back-face {
   width: 100%;
@@ -246,6 +246,9 @@ header a {
 }
 .Game section .flip {
   transform: rotateY(180deg);
+}
+.Game section .hidden {
+  visibility: hidden;
 }
 
 @media (max-width: 320px) {
