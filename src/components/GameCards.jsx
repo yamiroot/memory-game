@@ -29,9 +29,8 @@ const GameCards = () => {
         setTimeout(() => {
           pairOfCards[0].classList.add('hidden');
           pairOfCards[1].classList.add('hidden');
+          setPairCards([]);
         }, 1500);
-
-        setPairCards([]);
       } else {
         console.log('Cartas impares');
 
@@ -47,8 +46,8 @@ const GameCards = () => {
   return (
     <div>
       <Header hide={false} />
-      <main className="Game">
-        <section className="Cards">
+      <main role="main" className="Game">
+        <section role="application" className="Cards">
           {dataCards/* .sort(() => (0.5 - Math.random())) */
             .map((card) => <ItemCard img={card} key={card.id} flipCard={flipCard} />)}
         </section>

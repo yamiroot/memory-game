@@ -7,9 +7,9 @@ import ImgError from '../img/dinogif.gif';
 const PageError = () => (
   <div>
     <Header hide />
-    <main className="PageError">
+    <main role="main" className="PageError">
       <img src={ImgError} alt="Error 404" />
-      <section>
+      <section role="document">
         <h1>404</h1>
         <p className="text-center">El servidor no pudo encontrar el contenido solicitado.</p>
       </section>

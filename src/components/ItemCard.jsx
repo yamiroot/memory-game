@@ -1,20 +1,16 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import PropTypes from 'prop-types';
 import ImgBackFace from '../img/logoghibli.png';
 
 
 const ItemCard = ({ img, flipCard }) => (
-  <article className={img.id} onClick={() => flipCard(img.id)} data-card={img.alt}>
-    {/*   <a href="./" onClick={(event) => flipCard(event, img.id)}> */}
-    <div className="front-face">
+  <article role="presentation" className={img.id} data-card={img.alt} onClick={() => flipCard(img.id)}>
+    <div role="img" className="front-face">
       <img src={img.url} alt={img.alt} />
     </div>
-    <div className="back-face">
+    <div role="img" className="back-face">
       <img src={ImgBackFace} alt="Img back face" />
     </div>
-    {/*  </a> */}
   </article>
 );
 

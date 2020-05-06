@@ -2,8 +2,10 @@ import React from 'react';
 
 
 const Footer = () => (
-  <footer>
-    <p className="text-center text-black"> Copyright © | Memory Game | Todos los derechos reservados | 2020</p>
+  <footer role="contentinfo">
+    <p className="text-center text-black">
+      <small>Copyright © | Memory Game | Todos los derechos reservados | 2020</small>
+    </p>
   </footer>
 );
 

@@ -780,7 +780,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 11px;
+    font-size: 16px;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -789,7 +789,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 12px;
+    font-size: 17px;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -798,7 +798,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 13px;
+    font-size: 18px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -807,7 +807,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 14px;
+    font-size: 19px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
@@ -816,7 +816,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 @media (min-width: 1200px) {
@@ -825,7 +825,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 16px;
+    font-size: 21px;
   }
 }
 

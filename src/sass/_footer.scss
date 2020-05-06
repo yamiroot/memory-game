@@ -20,21 +20,21 @@
 footer {
 
     @media (max-width: $blackberry) {
-        @include style(5px 6% 5px 6%, 11px);
+        @include style(5px 6% 5px 6%, 16px);
     }
     @media (min-width: $blackberry) and (max-width: $smartphone) {
-        @include style(6px 8% 6px 8%, 12px);
+        @include style(6px 8% 6px 8%, 17px);
     }
     @media (min-width: $smartphone) and (max-width: $tablet) {
-        @include style(7px 10% 7px 10%, 13px);
+        @include style(7px 10% 7px 10%, 18px);
     }
     @media (min-width: $tablet) and (max-width: $desktop) {
-        @include style(8px 12% 8px 12%, 14px);
+        @include style(8px 12% 8px 12%, 19px);
     }
     @media (min-width: $desktop) and (max-width: $smart) {
-        @include style(9px 14% 9px 14%, 15px);
+        @include style(9px 14% 9px 14%, 20px);
     }
     @media (min-width: $smart) {
-        @include style(10px 16% 10px 16%, 16px);
+        @include style(10px 16% 10px 16%, 21px);
     }
 }

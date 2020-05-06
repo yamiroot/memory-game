@@ -9,10 +9,10 @@ import ImgThree from '../img/3.png';
 const GameRules = () => (
   <div>
     <Header hide />
-    <main className="GameRules">
+    <main role="main" className="GameRules">
       <h2 className="font-weight-bolder text-center">Reglas y especificaciones del juego</h2>
-      <section>
-        <article>
+      <section role="list">
+        <article role="listitem">
           <img src={ImgUno} alt="Step One" />
           <h4 className="text-center">Reglas generales</h4>
           <p className="text-center">
@@ -20,7 +20,7 @@ const GameRules = () => (
             en cada partida.
           </p>
         </article>
-        <article>
+        <article role="listitem">
           <img src={ImgTwo} alt="Step Two" />
           <h4 className="text-center">Desarrollo del juego</h4>
           <p className="text-center">
@@ -29,7 +29,7 @@ const GameRules = () => (
             idénticas.
           </p>
         </article>
-        <article>
+        <article role="listitem">
           <img src={ImgThree} alt="Step Three" />
           <h4 className="text-center">Fin del juego</h4>
           <p className="text-center">
