@@ -8,6 +8,7 @@ import ItemCard from './ItemCard';
 const GameCards = ({ dataCards }) => {
   const [pairOfCards, setPairCards] = useState([]);
   const [idCard, setIdCard] = useState('');
+  const [cardsFound, setCardsFound] = useState([]);
 
   const flipCard = (id) => {
     setIdCard(id);
@@ -21,6 +22,10 @@ const GameCards = ({ dataCards }) => {
 
       if (pairOfCards.length === 2) {
         if (pairOfCards[0].dataset.card === pairOfCards[1].dataset.card) {
+          cardsFound.push(pairOfCards[0].dataset.card);
+
+          setCardsFound(cardsFound);
+
           setTimeout(() => {
             pairOfCards[0].classList.add('hidden');
             pairOfCards[1].classList.add('hidden');
@@ -46,6 +51,7 @@ const GameCards = ({ dataCards }) => {
         <section role="application" className="Cards">
           {dataCards
             .map((card) => <ItemCard img={card} key={card.id} flipCard={flipCard} />)}
+          {(cardsFound.length === 8) && alert('Juego terminado')}
         </section>
       </main>
       <Footer />
