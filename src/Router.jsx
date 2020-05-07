@@ -5,7 +5,7 @@ import {
 import GameCards from './components/GameCards';
 import GameRules from './components/GameRules';
 import PageError from './components/PageError';
-
+import dataCards from './data/cards';
 
 const Router = () => (
   <BrowserRouter>
@@ -14,7 +14,7 @@ const Router = () => (
       <Route
         exact
         path="/gamecards"
-        render={() => <GameCards name="Juego de cartas" />}
+        render={() => <GameCards name="Juego de cartas" dataCards={dataCards.sort(() => (0.5 - Math.random()))} />}
       />
       <Route
         exact
