@@ -3,34 +3,38 @@ import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
 import ItemCard from './ItemCard';
-/* import dataCards from '../data/cards'; */
 
 
 const GameCards = ({ dataCards }) => {
   const [pairOfCards, setPairCards] = useState([]);
+  const [idCard, setIdCard] = useState('');
 
   const flipCard = (id) => {
-    const element = document.querySelector(`.${id}`);
-    element.classList.add('flip');
+    setIdCard(id);
 
-    pairOfCards.push(element);
-    setPairCards(pairOfCards);
+    if ((pairOfCards.length < 2) && (id !== idCard)) {
+      const element = document.querySelector(`.${id}`);
+      element.classList.add('flip');
 
-    if (pairOfCards.length === 2) {
-      if (pairOfCards[0].dataset.card === pairOfCards[1].dataset.card) {
-        setTimeout(() => {
-          pairOfCards[0].classList.add('hidden');
-          pairOfCards[1].classList.add('hidden');
+      pairOfCards.push(element);
+      setPairCards(pairOfCards);
 
-          setPairCards([]);
-        }, 1500);
-      } else {
-        setTimeout(() => {
-          pairOfCards[0].classList.remove('flip');
-          pairOfCards[1].classList.remove('flip');
+      if (pairOfCards.length === 2) {
+        if (pairOfCards[0].dataset.card === pairOfCards[1].dataset.card) {
+          setTimeout(() => {
+            pairOfCards[0].classList.add('hidden');
+            pairOfCards[1].classList.add('hidden');
 
-          setPairCards([]);
-        }, 1500);
+            setPairCards([]);
+          }, 1500);
+        } else {
+          setTimeout(() => {
+            pairOfCards[0].classList.remove('flip');
+            pairOfCards[1].classList.remove('flip');
+
+            setPairCards([]);
+          }, 1500);
+        }
       }
     }
   };
