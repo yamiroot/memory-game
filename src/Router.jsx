@@ -16,12 +16,10 @@ const Router = () => (
     <Switch>
       <Route exact path="/" render={() => (<Redirect to="/gamecards" />)} />
       <Route
-        exact
         path="/gamecards"
         render={() => <GameCards name="Juego de cartas" dataCards={dataCards.sort(() => (0.5 - Math.random()))} />}
       />
       <Route
-        exact
         path="/gamerules"
         render={() => <GameRules name="Reglas del juego" />}
       />
