@@ -1,0 +1,22 @@
+
+.modal-open {
+    
+    .modal-content {
+        font-family: 'Indie Flower', cursive;
+        font-family: 'Coming Soon', cursive;
+        font-family: 'Chilanka', cursive;
+
+        .modal-header {
+            background: #ffda56;
+        }
+
+        .modal-footer {
+            background: #ffda56;
+
+            .btn-warning:hover {
+                background: rgb(255, 230, 149);
+            }
+        }
+    }
+    
+}

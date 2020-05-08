@@ -25,7 +25,7 @@ const ModalGame = ({ show, onHide }) => (
     </Modal.Body>
     <Modal.Footer>
       <Link to="/">
-        <Button onClick={onHide} variant="secondary">Volver a jugar</Button>
+        <Button onClick={onHide} variant="warning">Volver a jugar</Button>
       </Link>
     </Modal.Footer>
   </Modal>

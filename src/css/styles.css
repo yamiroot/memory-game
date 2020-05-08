@@ -1042,6 +1042,21 @@ header a {
   }
 }
 
+.modal-open .modal-content {
+  font-family: "Indie Flower", cursive;
+  font-family: "Coming Soon", cursive;
+  font-family: "Chilanka", cursive;
+}
+.modal-open .modal-content .modal-header {
+  background: #ffda56;
+}
+.modal-open .modal-content .modal-footer {
+  background: #ffda56;
+}
+.modal-open .modal-content .modal-footer .btn-warning:hover {
+  background: #ffe695;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -1050,6 +1065,7 @@ header a {
 * body {
   height: 100vh;
   background: #fffb95;
+  padding: 0;
 }
 * body #root {
   margin: 0;

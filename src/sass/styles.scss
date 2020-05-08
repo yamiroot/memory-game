@@ -3,6 +3,7 @@
 @import '_gamerules';
 @import '_pageerror';
 @import '_footer';
+@import '_modal';
 
 
 * {
@@ -13,6 +14,7 @@
     body {
         height: 100vh;
         background: #fffb95;
+        padding: 0;
         
         #root {
             margin: 0;
