@@ -1,3 +1,4 @@
+@charset "UTF-8";
 header {
   background: #ffe300;
   margin: 0;
@@ -165,55 +166,164 @@ header a {
   }
 }
 
+/*
+
+// perspective: Determina la distancia entre el plano z=0 y el usuario 
+// para dar algo de perspectiva al elemento 3D posicionado. Es decir, 
+// nos ayudará a crear un efecto más realista en la animación invertida.
+
+// display: grid : Establece una cuadrícula con ítems en bloque, de forma 
+// equivalente a block.
+
+// grid-template-columns: Establece el tamaño de cada columna.
+
+// repeat([núm de veces], [valor o valores]): Representa un fragmento repetido 
+// de la lista, permitiendo un gran número de columnas o filas que exhiben un 
+// patrón recurrente.
+// Parámetros: 
+// - 1er parámetro: Número de repeticiones.
+// - 2do parámetro: Tamaño. Ancho del elemento.
+
+// minmax(min, max): Define un rango de tamaño mayor o igual que min y menor o 
+// igual que max. Se emplea con rejillas CSS.
+
+// justify-items: Alinea cada celda o área dentro del grid container.
+
+// fr(fraction): Simboliza una fracción de espacio restante en el grid.
+
+// position: Especifica cómo un elemento es posicionado en el documento.
+// - relative: El elemento es posicionado de acuerdo al flujo normal del 
+// documento. Es decir se le asigna la posición por defecto.
+// - absolute: El elemento no estará dentro del flujo normal de la página y
+// tomará como referencia la ventana del navegador o el elemento posicionado 
+// (que tenga cualquier valor de position excepto static) más cercano si es 
+// el padre del elemento que queremos posicionar.
+
+// transform: Aplica una transformación 2D o 3D a un elemento. Esta propiedad
+// le permite rotar, escalar, mover, sesgar, etc., elementos.
+
+// scale(): Define una transformación que modifica el tamaño de un elemento 
+// en el plano 2D. Se especifica con uno o dos valores, que representan la 
+// cantidad de escala que se aplicará en cada dirección.
+// Sintaxis: scale(sx), scale(sx, sy)
+// Parámetros:
+// sx: Es un número representando la abscisa del vector de escala.
+// sy: Es un número representado la ordenada de la escala del vector. 
+
+// transform-style: Especifica cómo se representan los elementos hijos en el
+// espacio 3D.
+// Nota: Esta propiedad debe usarse junto con la propiedad transform.
+// Valores: flat | preserve-3d | initial | inherit
+// - preserve-3d: Especifica que los elementos hijos conservarán su posición 3D.
+
+// transition: Permite cambiar los valores de las propiedades sin problemas, durante
+// una duración determinada. Para crear una transición debe especificar lo siguiente:
+// - El efecto que desea agregar.
+// - La duración del efecto.
+// Nota: Si no se especifica la parte de duración, la transición no tendrá efecto, 
+// porque el valor predeterminado es 0.
+
+// backface-visibility: Determina si la cara posterior de un elemento es visible de
+// frente al usuario. La cara posterior de un elemento siempre es un fondo transpa-
+// rente, permitiendo, cuando es visible, que se muestre una imagen espejo de la 
+// cara frontal.
+// Valores: visible | hidden
+// - visible: La cara posterior es visible, permitiendo que la cara frontal se muestre 
+// invertida.
+// - hidden: La cara posterior no es visible, ocultando la cara frontal.
+
+// rotateY(): Permite rotar un elemento sobre el eje Y en un espacio tridimensional. 
+
+// visibility: Controla la visibilidad del elemento, pero no afecta a como el navegador 
+// representa la caja.
+// Valores: visible | hidden
+// - hidden: Esconde el elemento pero el espacio que ocupa sigue representándose.
+*/
 .Game {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: flex;
   padding: 15px;
   margin: 0;
-  /*    @media (max-width: $blackberry) {
-         @include style(5px 6% 5px 6%, 11px);
-     }
-     @media (min-width: $blackberry) and (max-width: $smartphone) {
-         @include style(6px 8% 6px 8%, 12px);
-     }
-     @media (min-width: $smartphone) and (max-width: $tablet) {
-         @include style(7px 10% 7px 10%, 13px);
-     }
-     @media (min-width: $tablet) and (max-width: $desktop) {
-         @include style(8px 12% 8px 12%, 14px);
-     }
-     @media (min-width: $desktop) and (max-width: $smart) {
-         @include style(9px 14% 9px 14%, 15px);
-     }
-     @media (min-width: $smart) {
-         @include style(10px 16% 10px 16%, 16px);
-     } */
+
+  section {
+      width: auto;
+      margin: 35px auto 35px auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(100px, 1fr)); 
+      justify-items: center;
+      perspective: 1000px; 
+
+      article {
+          width: 90%;
+          height: 120px;
+          margin: 5px;
+
+          cursor: pointer;
+          position: relative;
+          transform: scale(1);
+          transition: transform .5s;
+          transform-style: preserve-3d;
+
+          article:active {
+              transform: scale(.97);
+              transition: transform .2s;
+          }
+
+          .front-face {
+              width: 100%;
+              height: 100%;
+              border-radius: 7px;
+              border: 6px solid #f9af00b3;
+
+              position: absolute;
+              backface-visibility: hidden;
+              transform: rotateY(180deg);
+
+              img {
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 2px;
+              }
+          }
+
+          .back-face {
+              width: 100%;
+              height: 100%;
+              border-radius: 7px;
+              background: #ffec55a6;
+              border: 6px solid #f9af00b3;
+
+
+              img {
+                  width: 100%;
+                  height: 100%;
+              }
+          }
+      }
+
+      .flip {
+          transform: rotateY(180deg);
+      }
+
+      .hidden {
+          visibility: hidden;
+      }
+  } */
 }
 .Game section {
-  width: auto;
-  margin: 35px auto 35px auto;
   display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, minmax(10%, 1fr));
   justify-items: center;
   perspective: 1000px;
 }
 .Game section article {
-  /* display: flex; */
-  width: 90%;
-  height: 120px;
-  margin: 5px;
   cursor: pointer;
-  border-radius: 12px;
   position: relative;
   transform: scale(1);
-  transform-style: preserve-3d;
   transition: transform 0.5s;
-  /*   img {
-        width: 100%;
-        height: 120px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 7px;
-    } */
+  transform-style: preserve-3d;
 }
 .Game section article article:active {
   transform: scale(0.97);
@@ -222,23 +332,20 @@ header a {
 .Game section article .front-face {
   width: 100%;
   height: 100%;
-  border-radius: 7px;
   position: absolute;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  border: 6px solid #f9af00b3;
 }
 .Game section article .front-face img {
   width: 100%;
   height: 100%;
+  border: 0;
   border-radius: 2px;
 }
 .Game section article .back-face {
   width: 100%;
   height: 100%;
-  border-radius: 7px;
   background: #ffec55a6;
-  border: 6px solid #f9af00b3;
 }
 .Game section article .back-face img {
   width: 100%;
@@ -249,6 +356,138 @@ header a {
 }
 .Game section .hidden {
   visibility: hidden;
+}
+@media (max-width: 320px) {
+  .Game {
+    padding: 15px;
+    margin: 0;
+  }
+  .Game section {
+    width: 95%;
+    height: auto;
+  }
+  .Game section article {
+    padding: 0;
+    margin: 3px;
+  }
+  .Game section article .front-face {
+    border: 4px solid #f9af00b3;
+    border-radius: 5px;
+  }
+  .Game section article .back-face {
+    border: 4px solid #f9af00b3;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .Game {
+    padding: 16px;
+    margin: 0;
+  }
+  .Game section {
+    width: 85%;
+    height: auto;
+  }
+  .Game section article {
+    padding: 0;
+    margin: 3px;
+  }
+  .Game section article .front-face {
+    border: 4px solid #f9af00b3;
+    border-radius: 5px;
+  }
+  .Game section article .back-face {
+    border: 4px solid #f9af00b3;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .Game {
+    padding: 20px;
+    margin: 0;
+  }
+  .Game section {
+    width: 70%;
+    height: auto;
+  }
+  .Game section article {
+    padding: 0;
+    margin: 3px;
+  }
+  .Game section article .front-face {
+    border: 4px solid #f9af00b3;
+    border-radius: 5px;
+  }
+  .Game section article .back-face {
+    border: 4px solid #f9af00b3;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Game {
+    padding: 30px;
+    margin: 0;
+  }
+  .Game section {
+    width: 60%;
+    height: auto;
+  }
+  .Game section article {
+    padding: 0;
+    margin: 5px;
+  }
+  .Game section article .front-face {
+    border: 5px solid #f9af00b3;
+    border-radius: 5px;
+  }
+  .Game section article .back-face {
+    border: 5px solid #f9af00b3;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .Game {
+    padding: 30px;
+    margin: 0;
+  }
+  .Game section {
+    width: 50%;
+    height: auto;
+  }
+  .Game section article {
+    padding: 0;
+    margin: 5px;
+  }
+  .Game section article .front-face {
+    border: 5px solid #f9af00b3;
+    border-radius: 5px;
+  }
+  .Game section article .back-face {
+    border: 5px solid #f9af00b3;
+    border-radius: 5px;
+  }
+}
+@media (min-width: 1200px) {
+  .Game {
+    padding: 30px;
+    margin: 0;
+  }
+  .Game section {
+    width: 40%;
+    height: auto;
+  }
+  .Game section article {
+    padding: 0;
+    margin: 5px;
+  }
+  .Game section article .front-face {
+    border: 5px solid #f9af00b3;
+    border-radius: 5px;
+  }
+  .Game section article .back-face {
+    border: 5px solid #f9af00b3;
+    border-radius: 5px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -780,7 +1019,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -789,7 +1028,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 17px;
+    font-size: 14px;
   }
 }
 @media (min-width: 480px) and (max-width: 768px) {
@@ -798,7 +1037,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -807,7 +1046,7 @@ header a {
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
-    font-size: 19px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {

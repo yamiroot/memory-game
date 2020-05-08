@@ -1,21 +1,6 @@
 @import '_measures';
 
 
-@mixin styleFlex() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-@mixin styleGrid() {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-    justify-items: center;
-    perspective: 1000px;
-}
-
-
 @mixin size($width, $height) {
     width: $width;
     height: $height;
@@ -26,6 +11,13 @@
     padding: $padding;
     margin: $margin;
 }
+
+
+@mixin border($border, $borderRadius) {
+    border: $border;
+    border-radius: $borderRadius;
+}
+
 
 
 // perspective: Determina la distancia entre el plano z=0 y el usuario 
@@ -94,72 +86,55 @@
 
 // rotateY(): Permite rotar un elemento sobre el eje Y en un espacio tridimensional. 
 
+// visibility: Controla la visibilidad del elemento, pero no afecta a como el navegador 
+// representa la caja.
+// Valores: visible | hidden
+// - hidden: Esconde el elemento pero el espacio que ocupa sigue representándose.
+
+
 
 .Game {
     display: flex;
-    padding: 15px;
-    margin: 0;
+    justify-content: center;
+    align-items: center;
 
     section {
-        width: auto;
-        margin: 35px auto 35px auto;
         display: grid;
-        grid-template-columns: repeat(4, minmax(100px, 1fr)); 
+        grid-template-columns: repeat(4, minmax(10%, 1fr));
         justify-items: center;
-        perspective: 1000px; 
+        perspective: 1000px;
 
         article {
-            /* display: flex; */
-            width: 90%;
-            height: 120px;
-            margin: 5px;
             cursor: pointer;
-            border-radius: 12px;
             position: relative;
             transform: scale(1);
-            transform-style: preserve-3d;
             transition: transform .5s;
+            transform-style: preserve-3d;
 
             article:active {
                 transform: scale(.97);
                 transition: transform .2s;
             }
 
-          /*   img {
-                width: 100%;
-                height: 120px;
-                margin-left: auto;
-                margin-right: auto;
-                border-radius: 7px;
-            } */
-
             .front-face {
-                width: 100%;
-                height: 100%;
-                border-radius: 7px;
+                @include size(100%, 100%);
+
                 position: absolute;
                 backface-visibility: hidden;
                 transform: rotateY(180deg);
-                border: 6px solid #f9af00b3;
 
                 img {
-                    width: 100%;
-                    height: 100%;
-                    border-radius: 2px;
+                    @include size(100%, 100%);
+                    @include border(0, 2px);
                 }
             }
 
             .back-face {
-                width: 100%;
-                height: 100%;
-                border-radius: 7px;
+                @include size(100%, 100%);
                 background: #ffec55a6;
-                border: 6px solid #f9af00b3;
-                
 
                 img {
-                    width: 100%;
-                    height: 100%;
+                    @include size(100%, 100%);
                 }
             }
         }
@@ -173,22 +148,124 @@
         }
     }
 
- /*    @media (max-width: $blackberry) {
-        @include style(5px 6% 5px 6%, 11px);
+
+    @media (max-width: $blackberry) {
+        @include paddingMargin(15px, 0);
+
+        section {
+            @include size(95%, auto);
+
+            article {
+                @include paddingMargin(0, 3px);
+
+                .front-face {
+                    @include border(4px solid #f9af00b3, 5px);
+                }
+
+                .back-face {
+                    @include border(4px solid #f9af00b3, 5px);
+                }
+            }
+        }
     }
+
     @media (min-width: $blackberry) and (max-width: $smartphone) {
-        @include style(6px 8% 6px 8%, 12px);
+        @include paddingMargin(16px, 0);
+
+        section {
+            @include size(85%, auto);
+
+            article {
+                @include paddingMargin(0, 3px);
+
+                .front-face {
+                    @include border(4px solid #f9af00b3, 5px);
+                }
+
+                .back-face {
+                    @include border(4px solid #f9af00b3, 5px);
+                }
+            }
+        }
     }
+
     @media (min-width: $smartphone) and (max-width: $tablet) {
-        @include style(7px 10% 7px 10%, 13px);
+        @include paddingMargin(20px, 0);
+
+        section {
+            @include size(70%, auto);
+
+            article {
+                @include paddingMargin(0, 3px);
+
+                .front-face {
+                    @include border(4px solid #f9af00b3, 5px);
+                }
+
+                .back-face {
+                    @include border(4px solid #f9af00b3, 5px);
+                }
+            }
+        }
     }
+
     @media (min-width: $tablet) and (max-width: $desktop) {
-        @include style(8px 12% 8px 12%, 14px);
+        @include paddingMargin(30px, 0);
+
+        section {
+            @include size(60%, auto);
+
+            article {
+                @include paddingMargin(0, 5px);
+
+                .front-face {
+                    @include border(5px solid #f9af00b3, 5px);
+                }
+
+                .back-face {
+                    @include border(5px solid #f9af00b3, 5px);
+                }
+            }
+        }
     }
+    
     @media (min-width: $desktop) and (max-width: $smart) {
-        @include style(9px 14% 9px 14%, 15px);
+        @include paddingMargin(30px, 0);
+
+        section {
+            @include size(50%, auto);
+
+            article {
+                @include paddingMargin(0, 5px);
+
+                .front-face {
+                    @include border(5px solid #f9af00b3, 5px);
+                }
+
+                .back-face {
+                    @include border(5px solid #f9af00b3, 5px);
+                }
+            }
+        }
     }
+
     @media (min-width: $smart) {
-        @include style(10px 16% 10px 16%, 16px);
-    } */
+        @include paddingMargin(30px, 0);
+
+        section {
+            @include size(40%, auto);
+
+            article {
+                @include paddingMargin(0, 5px);
+
+                .front-face {
+                    @include border(5px solid #f9af00b3, 5px);
+                }
+
+                .back-face {
+                    @include border(5px solid #f9af00b3, 5px);
+                }
+            }
+        }
+    }
 }

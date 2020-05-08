@@ -17,7 +17,7 @@ const GameRules = () => (
           <h4 className="text-center">Reglas generales</h4>
           <p className="text-center">
             Son 16 cartas, 8 pares idénticas. Las cartas cargan aleatoriamente
-            en cada partida.
+            en cada partida. El objetivo del juego es encontrar pares idénticos.
           </p>
         </article>
         <article role="listitem">
