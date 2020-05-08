@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter, Route, Switch, Redirect,
+  HashRouter, Route, Switch, Redirect,
 } from 'react-router-dom';
 import GameCards from './components/GameCards';
 import GameRules from './components/GameRules';
@@ -8,7 +8,7 @@ import PageError from './components/PageError';
 import dataCards from './data/cards';
 
 const Router = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       <Route exact path="/" render={() => (<Redirect to="/gamecards" />)} />
       <Route
@@ -21,7 +21,7 @@ const Router = () => (
       />
       <Route component={PageError} />
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 
