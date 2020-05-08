@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/cards-memory/static/css/main.48e107ff.chunk.css",
+    "main.js": "/cards-memory/static/js/main.c23060d1.chunk.js",
+    "main.js.map": "/cards-memory/static/js/main.c23060d1.chunk.js.map",
+    "runtime-main.js": "/cards-memory/static/js/runtime-main.b5e4bd05.js",
+    "runtime-main.js.map": "/cards-memory/static/js/runtime-main.b5e4bd05.js.map",
+    "static/js/2.a02c38e8.chunk.js": "/cards-memory/static/js/2.a02c38e8.chunk.js",
+    "static/js/2.a02c38e8.chunk.js.map": "/cards-memory/static/js/2.a02c38e8.chunk.js.map",
+    "index.html": "/cards-memory/index.html",
+    "precache-manifest.fc3a54c88c47f4675161f0c3570d2bf5.js": "/cards-memory/precache-manifest.fc3a54c88c47f4675161f0c3570d2bf5.js",
+    "service-worker.js": "/cards-memory/service-worker.js",
+    "static/css/main.48e107ff.chunk.css.map": "/cards-memory/static/css/main.48e107ff.chunk.css.map",
+    "static/js/2.a02c38e8.chunk.js.LICENSE.txt": "/cards-memory/static/js/2.a02c38e8.chunk.js.LICENSE.txt",
+    "static/media/cuentos-de-terramar.jpg": "/cards-memory/static/media/cuentos-de-terramar.f2879c73.jpg",
+    "static/media/el-castillo-ambulante.jpg": "/cards-memory/static/media/el-castillo-ambulante.c97792fb.jpg",
+    "static/media/el-viaje-de-chijiro.jpg": "/cards-memory/static/media/el-viaje-de-chijiro.9fa7ea9d.jpg",
+    "static/media/la-princesa-mononoke.jpg": "/cards-memory/static/media/la-princesa-mononoke.1b826e0e.jpg",
+    "static/media/la-tumba-de-las-luciernagas.jpg": "/cards-memory/static/media/la-tumba-de-las-luciernagas.e04fa394.jpg",
+    "static/media/logoGame.png": "/cards-memory/static/media/logoGame.14a4fbf1.png",
+    "static/media/mi-vecino-totoro.jpg": "/cards-memory/static/media/mi-vecino-totoro.39f14cb1.jpg",
+    "static/media/mis-vecinos-los-yamada.jpg": "/cards-memory/static/media/mis-vecinos-los-yamada.7bda1f50.jpg",
+    "static/media/susurros-del-corazon.jpg": "/cards-memory/static/media/susurros-del-corazon.f9096228.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b5e4bd05.js",
+    "static/js/2.a02c38e8.chunk.js",
+    "static/css/main.48e107ff.chunk.css",
+    "static/js/main.c23060d1.chunk.js"
+  ]
+}

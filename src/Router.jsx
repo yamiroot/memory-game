@@ -9,6 +9,10 @@ import dataCards from './data/cards';
 
 const Router = () => (
   <BrowserRouter>
+    <Redirect
+      from="/"
+      to="/gamecards"
+    />
     <Switch>
       <Route exact path="/" render={() => (<Redirect to="/gamecards" />)} />
       <Route
