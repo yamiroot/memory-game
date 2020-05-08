@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 import GameCards from './components/GameCards';
 import GameRules from './components/GameRules';
-/* import PageError from './components/PageError'; */
+import PageError from './components/PageError';
 import dataCards from './data/cards';
 
 const Router = () => (
@@ -19,7 +19,7 @@ const Router = () => (
         path="/gamerules"
         render={() => <GameRules name="Reglas del juego" />}
       />
-      {/*       <Route component={PageError} /> */}
+      <Route component={PageError} />
     </Switch>
   </BrowserRouter>
 );
