@@ -3,12 +3,12 @@
   "name": "Memory Game",
   "icons": [
     {
-      "src": "logo.png",
+      "src": "./logo.png",
       "sizes": "500x500",
       "type": "image/png"
     }
   ],
-  "start_url": "/gamecards",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#ffe277",
   "background_color": "#ffffff"
