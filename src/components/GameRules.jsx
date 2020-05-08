@@ -16,8 +16,8 @@ const GameRules = () => (
           <img src={ImgUno} alt="Step One" />
           <h4 className="text-center">Reglas generales</h4>
           <p className="text-center">
-            Son 16 cartas, 8 pares idénticas. Las cartas cargan aleatoriamente
-            en cada partida. El objetivo del juego es encontrar pares idénticos.
+            Las cartas cargan aleatoriamente en cada partida. Siendo en total 16 cartas,
+            8 pares idénticos. El objetivo del juego es encontrar cartas pares.
           </p>
         </article>
         <article role="listitem">

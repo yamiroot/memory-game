@@ -53,7 +53,7 @@ const GameCards = ({ dataCards }) => {
       <main role="main" className="Game">
         <section role="application" className="Cards">
           {dataCards
-            .map((card) => <ItemCard img={card} key={card.id} flipCard={flipCard} />)}
+            .map((card) => (<ItemCard img={card} key={card.id} flipCard={flipCard} />))}
           {(cardsFound.length === 8) && (
           <ModalGame
             show={modalShow}

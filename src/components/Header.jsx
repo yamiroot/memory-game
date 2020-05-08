@@ -12,7 +12,7 @@ const Header = ({ hide }) => {
           <img src={ImgLogo} alt="Logo de juego Memory Game" />
         </Link>
         <Link to="/gamecards">
-          <button type="button">Volver al juego</button>
+          <button type="button" className="btn">Volver al juego</button>
         </Link>
       </header>
     );
@@ -24,7 +24,7 @@ const Header = ({ hide }) => {
         <img src={ImgLogo} alt="Logo de juego Memory Game" />
       </Link>
       <Link to="/gamerules">
-        <button type="button">Reglas del juego</button>
+        <button type="button" className="btn">Reglas del juego</button>
       </Link>
     </header>
   );
