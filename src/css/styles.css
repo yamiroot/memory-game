@@ -167,7 +167,6 @@ header a {
 }
 
 /*
-
 // perspective: Determina la distancia entre el plano z=0 y el usuario 
 // para dar algo de perspectiva al elemento 3D posicionado. Es decir, 
 // nos ayudará a crear un efecto más realista en la animación invertida.
@@ -243,74 +242,7 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: flex;
-  padding: 15px;
-  margin: 0;
-
-  section {
-      width: auto;
-      margin: 35px auto 35px auto;
-      display: grid;
-      grid-template-columns: repeat(4, minmax(100px, 1fr)); 
-      justify-items: center;
-      perspective: 1000px; 
-
-      article {
-          width: 90%;
-          height: 120px;
-          margin: 5px;
-
-          cursor: pointer;
-          position: relative;
-          transform: scale(1);
-          transition: transform .5s;
-          transform-style: preserve-3d;
-
-          article:active {
-              transform: scale(.97);
-              transition: transform .2s;
-          }
-
-          .front-face {
-              width: 100%;
-              height: 100%;
-              border-radius: 7px;
-              border: 6px solid #f9af00b3;
-
-              position: absolute;
-              backface-visibility: hidden;
-              transform: rotateY(180deg);
-
-              img {
-                  width: 100%;
-                  height: 100%;
-                  border-radius: 2px;
-              }
-          }
-
-          .back-face {
-              width: 100%;
-              height: 100%;
-              border-radius: 7px;
-              background: #ffec55a6;
-              border: 6px solid #f9af00b3;
-
-
-              img {
-                  width: 100%;
-                  height: 100%;
-              }
-          }
-      }
-
-      .flip {
-          transform: rotateY(180deg);
-      }
-
-      .hidden {
-          visibility: hidden;
-      }
-  } */
+  flex-direction: column;
 }
 .Game section {
   display: grid;
@@ -357,6 +289,24 @@ header a {
 .Game section .hidden {
   visibility: hidden;
 }
+.Game a[href] {
+  outline: none;
+}
+.Game a[href] button[type=button] {
+  background: #ffe277;
+  border: 1px solid #ffc107;
+  font-family: "Indie Flower", cursive;
+  font-family: "Coming Soon", cursive;
+  font-family: "Chilanka", cursive;
+  outline: none;
+}
+.Game a[href] button[type=button]:hover {
+  background: #ffc107;
+}
+.Game a[href] button[type=button]:active {
+  background: white;
+  color: orange;
+}
 @media (max-width: 320px) {
   .Game {
     padding: 15px;
@@ -377,6 +327,10 @@ header a {
   .Game section article .back-face {
     border: 4px solid #f9af00b3;
     border-radius: 5px;
+  }
+  .Game button[type=button] {
+    margin-top: 10px;
+    font-size: 10px;
   }
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -400,6 +354,10 @@ header a {
     border: 4px solid #f9af00b3;
     border-radius: 5px;
   }
+  .Game button[type=button] {
+    margin-top: 12px;
+    font-size: 11px;
+  }
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .Game {
@@ -421,6 +379,10 @@ header a {
   .Game section article .back-face {
     border: 4px solid #f9af00b3;
     border-radius: 5px;
+  }
+  .Game button[type=button] {
+    margin-top: 15px;
+    font-size: 13px;
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -444,6 +406,10 @@ header a {
     border: 5px solid #f9af00b3;
     border-radius: 5px;
   }
+  .Game button[type=button] {
+    margin-top: 18px;
+    font-size: 15px;
+  }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .Game {
@@ -466,6 +432,10 @@ header a {
     border: 5px solid #f9af00b3;
     border-radius: 5px;
   }
+  .Game button[type=button] {
+    margin-top: 20px;
+    font-size: 17px;
+  }
 }
 @media (min-width: 1200px) {
   .Game {
@@ -487,6 +457,10 @@ header a {
   .Game section article .back-face {
     border: 5px solid #f9af00b3;
     border-radius: 5px;
+  }
+  .Game button[type=button] {
+    margin-top: 22px;
+    font-size: 18px;
   }
 }
 

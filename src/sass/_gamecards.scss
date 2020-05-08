@@ -19,7 +19,13 @@
 }
 
 
+@mixin styleButton($marginTop, $fontSize) {
+    margin-top: $marginTop;
+    font-size: $fontSize;
+}
 
+
+/*
 // perspective: Determina la distancia entre el plano z=0 y el usuario 
 // para dar algo de perspectiva al elemento 3D posicionado. Es decir, 
 // nos ayudará a crear un efecto más realista en la animación invertida.
@@ -90,13 +96,14 @@
 // representa la caja.
 // Valores: visible | hidden
 // - hidden: Esconde el elemento pero el espacio que ocupa sigue representándose.
-
+*/
 
 
 .Game {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 
     section {
         display: grid;
@@ -148,6 +155,28 @@
         }
     }
 
+    a[href] {
+        outline: none;
+
+        button[type="button"] {
+            background: #ffe277;
+            border: 1px solid #ffc107;
+            font-family: 'Indie Flower', cursive;
+            font-family: 'Coming Soon', cursive;
+            font-family: 'Chilanka', cursive;
+            outline: none;
+        }
+
+        button[type="button"]:hover {
+            background: #ffc107;
+        }
+
+        button[type="button"]:active {
+            background: white;
+            color: orange;
+        }
+    }
+
 
     @media (max-width: $blackberry) {
         @include paddingMargin(15px, 0);
@@ -166,6 +195,10 @@
                     @include border(4px solid #f9af00b3, 5px);
                 }
             }
+        }
+
+        button[type="button"] {
+            @include styleButton(10px, 10px);
         }
     }
 
@@ -187,6 +220,10 @@
                 }
             }
         }
+
+        button[type="button"] {
+            @include styleButton(12px, 11px);
+        }
     }
 
     @media (min-width: $smartphone) and (max-width: $tablet) {
@@ -206,6 +243,10 @@
                     @include border(4px solid #f9af00b3, 5px);
                 }
             }
+        }
+
+        button[type="button"] {
+            @include styleButton(15px, 13px);
         }
     }
 
@@ -227,6 +268,10 @@
                 }
             }
         }
+
+        button[type="button"] {
+            @include styleButton(18px, 15px);
+        }
     }
     
     @media (min-width: $desktop) and (max-width: $smart) {
@@ -247,6 +292,10 @@
                 }
             }
         }
+
+        button[type="button"] {
+            @include styleButton(20px, 17px);
+        }
     }
 
     @media (min-width: $smart) {
@@ -266,6 +315,10 @@
                     @include border(5px solid #f9af00b3, 5px);
                 }
             }
+        }
+
+        button[type="button"] {
+            @include styleButton(22px, 18px);
         }
     }
 }

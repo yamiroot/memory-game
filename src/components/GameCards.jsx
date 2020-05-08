@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Footer from './Footer';
 import ItemCard from './ItemCard';
+import ModalGame from './ModalGame';
 
 
 const GameCards = ({ dataCards }) => {
   const [pairOfCards, setPairCards] = useState([]);
   const [idCard, setIdCard] = useState('');
   const [cardsFound, setCardsFound] = useState([]);
+  const [modalShow, setModalShow] = useState(true);
 
   const flipCard = (id) => {
     setIdCard(id);
@@ -51,8 +54,16 @@ const GameCards = ({ dataCards }) => {
         <section role="application" className="Cards">
           {dataCards
             .map((card) => <ItemCard img={card} key={card.id} flipCard={flipCard} />)}
-          {(cardsFound.length === 8) && alert('Juego terminado')}
+          {(cardsFound.length === 8) && (
+          <ModalGame
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
+          )}
         </section>
+        <Link to="/">
+          <button type="button" className="btn">Nueva partida</button>
+        </Link>
       </main>
       <Footer />
     </div>
