@@ -1,4 +1,4 @@
-<p align="center"><a href="/yamiquispe/cards-memory/blob/master/public/logo.png"><img src="./public/logo.png" width=80px></a></p>
+<p align="center"><a href="public/logo.png"><img src="./public/logo.png" width=80px></a></p>
 <h1 align="center">Memory Game</h1>
 
 Juego de memoria de cartas.
