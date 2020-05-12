@@ -26,7 +26,7 @@ Juego de memoria de cartas.
 
 #### Vista Desktop:
 
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
+<img src="./src/img/demo.png" alt="Demo Memory Game">
 
 #### Vista Móvil:
 
