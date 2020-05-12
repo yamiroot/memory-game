@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/cards-memory/static/css/main.48e107ff.chunk.css",
-    "main.js": "/cards-memory/static/js/main.afe525ba.chunk.js",
-    "main.js.map": "/cards-memory/static/js/main.afe525ba.chunk.js.map",
+    "main.css": "/cards-memory/static/css/main.9a5d43ee.chunk.css",
+    "main.js": "/cards-memory/static/js/main.5a6824b2.chunk.js",
+    "main.js.map": "/cards-memory/static/js/main.5a6824b2.chunk.js.map",
     "runtime-main.js": "/cards-memory/static/js/runtime-main.b5e4bd05.js",
     "runtime-main.js.map": "/cards-memory/static/js/runtime-main.b5e4bd05.js.map",
     "static/js/2.d42907f5.chunk.js": "/cards-memory/static/js/2.d42907f5.chunk.js",
     "static/js/2.d42907f5.chunk.js.map": "/cards-memory/static/js/2.d42907f5.chunk.js.map",
     "index.html": "/cards-memory/index.html",
-    "precache-manifest.9000cfb004d2a73f4dc52018ed0a6b75.js": "/cards-memory/precache-manifest.9000cfb004d2a73f4dc52018ed0a6b75.js",
+    "precache-manifest.99930f5502b836aeb49e07557c33783d.js": "/cards-memory/precache-manifest.99930f5502b836aeb49e07557c33783d.js",
     "service-worker.js": "/cards-memory/service-worker.js",
-    "static/css/main.48e107ff.chunk.css.map": "/cards-memory/static/css/main.48e107ff.chunk.css.map",
+    "static/css/main.9a5d43ee.chunk.css.map": "/cards-memory/static/css/main.9a5d43ee.chunk.css.map",
     "static/js/2.d42907f5.chunk.js.LICENSE.txt": "/cards-memory/static/js/2.d42907f5.chunk.js.LICENSE.txt",
     "static/media/cuentos-de-terramar.jpg": "/cards-memory/static/media/cuentos-de-terramar.f2879c73.jpg",
     "static/media/el-castillo-ambulante.jpg": "/cards-memory/static/media/el-castillo-ambulante.c97792fb.jpg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.b5e4bd05.js",
     "static/js/2.d42907f5.chunk.js",
-    "static/css/main.48e107ff.chunk.css",
-    "static/js/main.afe525ba.chunk.js"
+    "static/css/main.9a5d43ee.chunk.css",
+    "static/js/main.5a6824b2.chunk.js"
   ]
 }
