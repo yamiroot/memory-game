@@ -1,3 +1,4 @@
+<p align="center"><a href="public/logo.png"><img src="./public/logo.png" width=80px></a></p>
 <h1 align="center">Memory Game</h1>
 
 Juego de memoria de cartas.
@@ -78,7 +79,3 @@ directory: 8 Components: 7
 ## Licencia
 
 Copyright (c) 2020, Licencia MIT.
-
-
-
-
