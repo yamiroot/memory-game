@@ -10,20 +10,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    body {
-        height: 100vh;
-        background: #fffb95;
-        padding: 0;
+}
+    
+body {
+    background: #fffb95;
+    padding: 0;
         
-        #root {
-            margin: 0;
+    #root {
+        margin: 0;
+        display: flex;
+        width: 100%;
                             
-            div {
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-            }
+        div {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
         }
     }
 }
+

@@ -3,6 +3,7 @@
 
 @mixin style($padding, $size) {
     padding: $padding;
+    margin: 0;
     font-family: 'Indie Flower', cursive;                        
     font-family: 'Coming Soon', cursive;
     font-family: 'Chilanka', cursive;

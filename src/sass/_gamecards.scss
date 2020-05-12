@@ -179,7 +179,7 @@
 
 
     @media (max-width: $blackberry) {
-        @include paddingMargin(15px, 0);
+        @include paddingMargin(12% 12%, 0);
 
         section {
             @include size(95%, auto);
@@ -203,7 +203,7 @@
     }
 
     @media (min-width: $blackberry) and (max-width: $smartphone) {
-        @include paddingMargin(16px, 0);
+        @include paddingMargin(10% 10%, 0);
 
         section {
             @include size(85%, auto);
@@ -227,7 +227,7 @@
     }
 
     @media (min-width: $smartphone) and (max-width: $tablet) {
-        @include paddingMargin(20px, 0);
+        @include paddingMargin(7% 7%, 0);
 
         section {
             @include size(70%, auto);
@@ -251,7 +251,7 @@
     }
 
     @media (min-width: $tablet) and (max-width: $desktop) {
-        @include paddingMargin(30px, 0);
+        @include paddingMargin(5% 5%, 0);
 
         section {
             @include size(60%, auto);
@@ -275,7 +275,7 @@
     }
     
     @media (min-width: $desktop) and (max-width: $smart) {
-        @include paddingMargin(30px, 0);
+        @include paddingMargin(4% 4%, 0);
 
         section {
             @include size(50%, auto);
@@ -299,7 +299,7 @@
     }
 
     @media (min-width: $smart) {
-        @include paddingMargin(30px, 0);
+        @include paddingMargin(3% 3%, 0);
 
         section {
             @include size(40%, auto);

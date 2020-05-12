@@ -1,4 +1,3 @@
-@charset "UTF-8";
 header {
   background: #ffe300;
   margin: 0;
@@ -166,78 +165,6 @@ header a {
   }
 }
 
-/*
-// perspective: Determina la distancia entre el plano z=0 y el usuario 
-// para dar algo de perspectiva al elemento 3D posicionado. Es decir, 
-// nos ayudará a crear un efecto más realista en la animación invertida.
-
-// display: grid : Establece una cuadrícula con ítems en bloque, de forma 
-// equivalente a block.
-
-// grid-template-columns: Establece el tamaño de cada columna.
-
-// repeat([núm de veces], [valor o valores]): Representa un fragmento repetido 
-// de la lista, permitiendo un gran número de columnas o filas que exhiben un 
-// patrón recurrente.
-// Parámetros: 
-// - 1er parámetro: Número de repeticiones.
-// - 2do parámetro: Tamaño. Ancho del elemento.
-
-// minmax(min, max): Define un rango de tamaño mayor o igual que min y menor o 
-// igual que max. Se emplea con rejillas CSS.
-
-// justify-items: Alinea cada celda o área dentro del grid container.
-
-// fr(fraction): Simboliza una fracción de espacio restante en el grid.
-
-// position: Especifica cómo un elemento es posicionado en el documento.
-// - relative: El elemento es posicionado de acuerdo al flujo normal del 
-// documento. Es decir se le asigna la posición por defecto.
-// - absolute: El elemento no estará dentro del flujo normal de la página y
-// tomará como referencia la ventana del navegador o el elemento posicionado 
-// (que tenga cualquier valor de position excepto static) más cercano si es 
-// el padre del elemento que queremos posicionar.
-
-// transform: Aplica una transformación 2D o 3D a un elemento. Esta propiedad
-// le permite rotar, escalar, mover, sesgar, etc., elementos.
-
-// scale(): Define una transformación que modifica el tamaño de un elemento 
-// en el plano 2D. Se especifica con uno o dos valores, que representan la 
-// cantidad de escala que se aplicará en cada dirección.
-// Sintaxis: scale(sx), scale(sx, sy)
-// Parámetros:
-// sx: Es un número representando la abscisa del vector de escala.
-// sy: Es un número representado la ordenada de la escala del vector. 
-
-// transform-style: Especifica cómo se representan los elementos hijos en el
-// espacio 3D.
-// Nota: Esta propiedad debe usarse junto con la propiedad transform.
-// Valores: flat | preserve-3d | initial | inherit
-// - preserve-3d: Especifica que los elementos hijos conservarán su posición 3D.
-
-// transition: Permite cambiar los valores de las propiedades sin problemas, durante
-// una duración determinada. Para crear una transición debe especificar lo siguiente:
-// - El efecto que desea agregar.
-// - La duración del efecto.
-// Nota: Si no se especifica la parte de duración, la transición no tendrá efecto, 
-// porque el valor predeterminado es 0.
-
-// backface-visibility: Determina si la cara posterior de un elemento es visible de
-// frente al usuario. La cara posterior de un elemento siempre es un fondo transpa-
-// rente, permitiendo, cuando es visible, que se muestre una imagen espejo de la 
-// cara frontal.
-// Valores: visible | hidden
-// - visible: La cara posterior es visible, permitiendo que la cara frontal se muestre 
-// invertida.
-// - hidden: La cara posterior no es visible, ocultando la cara frontal.
-
-// rotateY(): Permite rotar un elemento sobre el eje Y en un espacio tridimensional. 
-
-// visibility: Controla la visibilidad del elemento, pero no afecta a como el navegador 
-// representa la caja.
-// Valores: visible | hidden
-// - hidden: Esconde el elemento pero el espacio que ocupa sigue representándose.
-*/
 .Game {
   display: flex;
   justify-content: center;
@@ -309,7 +236,7 @@ header a {
 }
 @media (max-width: 320px) {
   .Game {
-    padding: 15px;
+    padding: 12% 12%;
     margin: 0;
   }
   .Game section {
@@ -335,7 +262,7 @@ header a {
 }
 @media (min-width: 320px) and (max-width: 480px) {
   .Game {
-    padding: 16px;
+    padding: 10% 10%;
     margin: 0;
   }
   .Game section {
@@ -361,7 +288,7 @@ header a {
 }
 @media (min-width: 480px) and (max-width: 768px) {
   .Game {
-    padding: 20px;
+    padding: 7% 7%;
     margin: 0;
   }
   .Game section {
@@ -387,7 +314,7 @@ header a {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .Game {
-    padding: 30px;
+    padding: 5% 5%;
     margin: 0;
   }
   .Game section {
@@ -413,7 +340,7 @@ header a {
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
   .Game {
-    padding: 30px;
+    padding: 4% 4%;
     margin: 0;
   }
   .Game section {
@@ -439,7 +366,7 @@ header a {
 }
 @media (min-width: 1200px) {
   .Game {
-    padding: 30px;
+    padding: 3% 3%;
     margin: 0;
   }
   .Game section {
@@ -990,6 +917,7 @@ header a {
 @media (max-width: 320px) {
   footer {
     padding: 5px 6% 5px 6%;
+    margin: 0;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -999,6 +927,7 @@ header a {
 @media (min-width: 320px) and (max-width: 480px) {
   footer {
     padding: 6px 8% 6px 8%;
+    margin: 0;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -1008,6 +937,7 @@ header a {
 @media (min-width: 480px) and (max-width: 768px) {
   footer {
     padding: 7px 10% 7px 10%;
+    margin: 0;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -1017,6 +947,7 @@ header a {
 @media (min-width: 768px) and (max-width: 1024px) {
   footer {
     padding: 8px 12% 8px 12%;
+    margin: 0;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -1026,6 +957,7 @@ header a {
 @media (min-width: 1024px) and (max-width: 1200px) {
   footer {
     padding: 9px 14% 9px 14%;
+    margin: 0;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -1035,6 +967,7 @@ header a {
 @media (min-width: 1200px) {
   footer {
     padding: 10px 16% 10px 16%;
+    margin: 0;
     font-family: "Indie Flower", cursive;
     font-family: "Coming Soon", cursive;
     font-family: "Chilanka", cursive;
@@ -1062,18 +995,21 @@ header a {
   padding: 0;
   box-sizing: border-box;
 }
-* body {
-  height: 100vh;
+
+body {
   background: #fffb95;
   padding: 0;
 }
-* body #root {
+body #root {
   margin: 0;
+  display: flex;
+  width: 100%;
 }
-* body #root div {
+body #root div {
   margin: 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

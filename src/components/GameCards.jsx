@@ -28,6 +28,7 @@ const GameCards = ({ dataCards }) => {
           cardsFound.push(pairOfCards[0].dataset.card);
 
           setCardsFound(cardsFound);
+          setIdCard('');
 
           setTimeout(() => {
             pairOfCards[0].classList.add('hidden');
@@ -36,6 +37,8 @@ const GameCards = ({ dataCards }) => {
             setPairCards([]);
           }, 1500);
         } else {
+          setIdCard('');
+
           setTimeout(() => {
             pairOfCards[0].classList.remove('flip');
             pairOfCards[1].classList.remove('flip');
