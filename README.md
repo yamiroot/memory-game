@@ -24,13 +24,8 @@ Juego de memoria de cartas.
 
 ## Demos
 
-#### Vista Desktop:
 
 <img src="./src/img/demo.png" alt="Demo Memory Game">
-
-#### Vista Móvil:
-
-![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
 
 
 ## Sobre el proyecto
