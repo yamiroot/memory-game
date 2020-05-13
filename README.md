@@ -32,7 +32,7 @@ Juego de memoria de cartas.
 
 - Implementado en `React`.
 - Otras tecnologías: `Js`, `Node.js`, `Jest`, `Bootstrap`, `Sass`, `Css` y `Html`.
-- Pruebas unitarias con converage al 100%.
+- Pruebas unitarias con coverage al 100%.
 - Desplegado en `gh-pages`.
 
 ## Boilerplate del proyecto
@@ -73,4 +73,4 @@ directory: 8 Components: 7
 
 ## Licencia
 
-Copyright (c) 2020, Licencia MIT.
+Copyleft 🄯 2020, Licencia BSD-3-Clause.
