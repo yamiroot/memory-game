@@ -74,3 +74,4 @@ directory: 8 Components: 7
 ## Licencia
 
 Copyleft 🄯 2020, Licencia BSD-3-Clause.
+
