@@ -7,7 +7,7 @@ import ImgLogo from '../img/logoGame.png';
 const Header = ({ hide }) => {
   if (hide) {
     return (
-      <header role="banner" className="Header">
+      <header role="banner" className="Header" data-testid="ViewRules">
         <Link to="/">
           <img src={ImgLogo} alt="Logo de juego Memory Game" />
         </Link>
@@ -19,7 +19,7 @@ const Header = ({ hide }) => {
   }
 
   return (
-    <header role="banner" className="Header">
+    <header role="banner" className="Header" data-testid="ViewGame">
       <Link to="/">
         <img src={ImgLogo} alt="Logo de juego Memory Game" />
       </Link>
