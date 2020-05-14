@@ -31,10 +31,12 @@ const ModalGame = ({ show, onHide }) => (
   </Modal>
 );
 
+
 ModalGame.propTypes = {
   show: PropTypes.bool.isRequired,
   onHide: PropTypes.func.isRequired,
 };
+
 
 export default ModalGame;
 

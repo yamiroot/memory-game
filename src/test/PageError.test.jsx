@@ -15,6 +15,5 @@ it('El componente PageError se encuentra renderizado en el documento.', () => {
   const { queryByTestId } = render(<PageError />);
 
   expect(queryByTestId('pageerror')).toBeInTheDocument();
-
   expect(queryByTestId('pageerror')).toContainHTML('<a href="/"></a>');
 });
