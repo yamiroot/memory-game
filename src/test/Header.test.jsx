@@ -1,9 +1,8 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import { render, cleanup, fireEvent } from '@testing-library/react';
-import { act } from 'react-dom/test-utils';
+import { render, cleanup, act } from '@testing-library/react';
+import { waitFor, fireEvent } from '@testing-library/dom';
 import Header from '../components/Header';
 
 
@@ -23,15 +22,30 @@ const renderWithRouter = (component) => {
 };
 
 
-it('Al dar click en el logo del juego debería renderizar el botón "Reglas del juego" en el Header.', () => {
-  const { getByTestId } = renderWithRouter(<Header hide={false} />);
+it('Al dar click en el logo del juego debería renderizar el botón "Reglas del juego" en el Header.', (async () => {
+  const { queryByTestId, rerender } = renderWithRouter(<Header hide={false} />);
+  const history = createMemoryHistory();
 
-  act(() => {
-    fireEvent.click(getByTestId('game-home-link'));
+  expect(queryByTestId('rules-button').textContent).toBe('Reglas del juego');
+
+  /* act(() => {
+    fireEvent.click(queryByTestId('game-home-link'));
   });
 
-  expect(getByTestId('rules-button').textContent).toBe('Reglas del juego');
-});
+  rerender(<Router history={history}><Header hide /></Router>); */
+  renderWithRouter(<Header hide />);
+
+  expect(queryByTestId('game-button').textContent).toBe('Volver al juego');
+
+  /*
+
+  await waitFor(() => {
+    expect(queryByTestId('header-rules')).toBeTruthy();
+  }); */
+
+/* 
+  expect(getByTestId('rules-button').textContent).toBe('Reglas del juego'); */
+}));
 
 
 it('botón Reglas del juego', () => {

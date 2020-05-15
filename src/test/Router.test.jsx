@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
@@ -11,20 +10,9 @@ import HashRouter from '../Router';
 afterEach(cleanup);
 
 
-const renderWithRouter = (component) => {
-  const history = createMemoryHistory();
-  return {
-    ...render(
-      <Router history={history}>
-        {component}
-      </Router>,
-    ),
-  };
-};
-
-
 it('Se renderiza como vista principal a Game Cards.', () => {
-  const { container, getByTestId } = renderWithRouter(<HashRouter />);
+  const history = createMemoryHistory();
+  const { container, getByTestId } = render(<Router history={history}><HashRouter /></Router>);
   const header = getByTestId('header-game');
   const main = getByTestId('game');
   const footer = getByTestId('footer');
@@ -40,41 +28,44 @@ it('Se renderiza como vista principal a Game Cards.', () => {
 
 
 it('Se renderiza la vista Game Rules al dar click en el botón "rules-button".', () => {
-  const { container, getByTestId } = renderWithRouter(<HashRouter />);
+  const history = createMemoryHistory();
+  history.push('/gamecards');
+  const { container, getByTestId } = render(<Router history={history}><HashRouter /></Router>);
+
+  expect(container).toContainElement(getByTestId('view-game'));
 
   fireEvent.click(getByTestId('rules-link'));
+  console.log('Ruta activada: ', history.location.pathname);
 
-  // La página renderiza el componente GameRules
-  expect(container).toContainElement(getByTestId('rules'));
+  // La página renderiza las reglas del juego
+  expect(container).toContainElement(getByTestId('view-rules'));
 });
 
 
 it('Se renderiza la vista Game Cards al dar click en el botón "game-button".', () => {
-  const { container, getByTestId } = renderWithRouter(<HashRouter />);
+  const history = createMemoryHistory();
+  history.push('/gamerules');
+
+  const { container, getByTestId } = render(<Router history={history}><HashRouter /></Router>);
+
+  expect(container).toContainElement(getByTestId('view-rules'));
 
   fireEvent.click(getByTestId('game-link'));
+  console.log('Ruta activada: ', history.location.pathname);
 
-  // La página renderiza el componente Header que tiene la clase "Header" cuyo texto
-  // del botón es "Reglas del juego"
-  expect(getByTestId('header-game')).toHaveClass('Header');
-  expect(screen.getByText('Reglas del juego')).toBeTruthy();
-  // La página renderiza el componente GameCards
-  expect(container).toContainElement(getByTestId('game'));
-  // La página renderiza el componente Footer
-  expect(screen.getByRole('contentinfo')).not.toBeEmpty();
+  // La página renderiza el juego
+  expect(getByTestId('view-game')).toBeTruthy();
 });
 
 
 it('La página renderiza la vista de error 404.', () => {
   const history = createMemoryHistory();
   history.push('/pagehhddhdhdh');
-  console.log('aquí ppues', history.location.pathname);
 
-  const { getByTestId } = render(
-    <Router history={history}>
-      <HashRouter />
-    </Router>,
-  );
+  console.log('Ruta activada:', history.location.pathname);
 
+  const { getByTestId } = render(<Router history={history}><HashRouter /></Router>);
+
+  // La página renderiza la vista de error
   expect(getByTestId('view-error')).toBeTruthy();
 });
