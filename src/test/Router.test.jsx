@@ -1,9 +1,7 @@
 import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
-import {
-  render, screen, cleanup, fireEvent,
-} from '@testing-library/react';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import HashRouter from '../Router';
 
 
