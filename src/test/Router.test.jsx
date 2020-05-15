@@ -56,6 +56,26 @@ it('Se renderiza la vista Game Cards al dar click en el botón "game-button".', 
 });
 
 
+it('Se renderiza la vista Game Cards al dar click al logo del juego.', () => {
+  const history = createMemoryHistory();
+
+  const { container, getByTestId } = render(<Router history={history}><HashRouter /></Router>);
+
+  console.log('Ruta activada: ', history.location.pathname);
+
+  expect(container).toContainElement(getByTestId('view-game'));
+
+  fireEvent.click(getByTestId('game-home-link'));
+
+  history.push('/');
+
+  console.log('Ruta activada: ', history.location.pathname);
+
+  // La página renderiza el juego
+  expect(getByTestId('view-game')).toBeTruthy();
+});
+
+
 it('La página renderiza la vista de error 404.', () => {
   const history = createMemoryHistory();
   history.push('/pagehhddhdhdh');
