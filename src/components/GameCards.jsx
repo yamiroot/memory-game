@@ -51,9 +51,9 @@ const GameCards = ({ dataCards }) => {
   };
 
   return (
-    <div>
+    <div data-testid="view-game">
       <Header hide={false} />
-      <main role="main" className="Game">
+      <main role="main" className="Game" data-testid="game">
         <section role="application" className="Cards">
           {dataCards
             .map((card) => (<ItemCard img={card} key={card.id} flipCard={flipCard} />))}
@@ -65,7 +65,7 @@ const GameCards = ({ dataCards }) => {
           )}
         </section>
         <Link to="/">
-          <button type="button" className="btn">Nueva partida</button>
+          <button type="button" data-testid="new-game" className="btn">Nueva partida</button>
         </Link>
       </main>
       <Footer />

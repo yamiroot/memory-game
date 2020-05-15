@@ -7,24 +7,24 @@ import ImgLogo from '../img/logoGame.png';
 const Header = ({ hide }) => {
   if (hide) {
     return (
-      <header role="banner" className="Header" data-testid="ViewRules">
-        <Link to="/" data-testid="game-link">
+      <header role="banner" className="Header" data-testid="header-rules">
+        <Link to="/" data-testid="game-home-link">
           <img src={ImgLogo} alt="Logo de juego Memory Game" />
         </Link>
         <Link to="/gamecards" data-testid="game-link">
-          <button type="button" className="btn">Volver al juego</button>
+          <button data-testid="game-button" type="button" className="btn">Volver al juego</button>
         </Link>
       </header>
     );
   }
 
   return (
-    <header role="banner" className="Header" data-testid="ViewGame">
-      <Link to="/" data-testid="game-link">
+    <header role="banner" className="Header" data-testid="header-game">
+      <Link to="/" data-testid="game-home-link">
         <img src={ImgLogo} alt="Logo de juego Memory Game" />
       </Link>
       <Link to="/gamerules" data-testid="rules-link">
-        <button type="button" className="btn">Reglas del juego</button>
+        <button data-testid="rules-button" type="button" className="btn">Reglas del juego</button>
       </Link>
     </header>
   );

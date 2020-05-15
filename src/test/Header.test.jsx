@@ -1,32 +1,18 @@
 /* eslint-disable no-undef */
 import React from 'react';
-import { render, cleanup, fireEvent } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
+import { render, cleanup, fireEvent } from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import Header from '../components/Header';
 
 
 afterEach(cleanup);
 
 
-it('Debería retornar el componente Header como un valor verdadero de acuerdo al id ViewRules.', () => {
-  const { getByTestId } = render(<Header hide />);
-  const component = getByTestId('ViewRules');
-
-  expect(component).toBeTruthy();
-});
-
-
-it('Debería retornar el componente Header como un valor verdadero de acuerdo al id ViewGame.', () => {
-  const { getByTestId } = render(<Header hide={false} />);
-  const component = getByTestId('ViewGame');
-
-  expect(component).toBeTruthy();
-});
-
-
 const renderWithRouter = (component) => {
   const history = createMemoryHistory();
+
   return {
     ...render(
       <Router history={history}>
@@ -37,28 +23,44 @@ const renderWithRouter = (component) => {
 };
 
 
-/* it('should render the home page', () => {
-  const { container, getByTestId } = renderWithRouter(<TestRouter />);
-  const navbar = getByTestId('navbar');
-  const link = getByTestId('home-link');
+it('Al dar click en el logo del juego debería renderizar el botón "Reglas del juego" en el Header.', () => {
+  const { getByTestId } = renderWithRouter(<Header hide={false} />);
 
-  expect(container.innerHTML).toMatch('Home page');
-  expect(navbar).toContainElement(link);
+  act(() => {
+    fireEvent.click(getByTestId('game-home-link'));
+  });
+
+  expect(getByTestId('rules-button').textContent).toBe('Reglas del juego');
+});
+
+
+it('botón Reglas del juego', () => {
+  const { getByTestId } = renderWithRouter(<Header hide={false} />);
+
+  fireEvent.click(getByTestId('rules-link'));
+
+  expect(getByTestId('rules-button').textContent).toBe('Reglas del juego');
+});
+
+
+it('botón Volver al juego', () => {
+  const { getByTestId } = renderWithRouter(<Header hide />);
+
+  fireEvent.click(getByTestId('game-link'));
+
+  expect(getByTestId('game-button').textContent).toBe('Volver al juego');
+});
+
+
+/* it('should navigate to the contact page with the params', () => {
+  const container = renderWithRouter(<Header hide={false} />);
+  const link = container.getByTestId('rules-link');
+
+  act(() => {
+    fireEvent.click(link);
+    console.log('click aquí gg');
+  });
+
+  const instance = container.getInstance();
+  console.log(instance);
 }); */
-
-
-it('should navigate to the about page', () => {
-  const { container, getByTestId } = renderWithRouter(<TestRouter />);
-
-  fireEvent.click(getByTestId('about-link'));
-
-  expect(container.innerHTML).toMatch('About page');
-});
-
-it('should navigate to the contact page with the params', () => {
-  const { container, getByTestId } = renderWithRouter(<TestRouter />);
-
-  fireEvent.click(getByTestId('contact-link'));
-
-  expect(container.innerHTML).toMatch('John Doe');
-});

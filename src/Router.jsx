@@ -7,6 +7,7 @@ import GameRules from './components/GameRules';
 import PageError from './components/PageError';
 import dataCards from './data/cards';
 
+
 const Router = () => (
   <HashRouter>
     <Switch>

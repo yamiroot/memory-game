@@ -7,10 +7,10 @@ import ImgThree from '../img/3.png';
 
 
 const GameRules = () => (
-  <div>
+  <div data-testid="view-rules">
     <Header hide />
-    <main role="main" className="GameRules">
-      <h2 className="font-weight-bolder text-center">Reglas y especificaciones del juego</h2>
+    <main role="main" className="GameRules" data-testid="rules">
+      <h2 className="font-weight-bolder text-center" data-testid="title-rules">Reglas y especificaciones del juego</h2>
       <section role="list">
         <article role="listitem">
           <img src={ImgUno} alt="Step One" />

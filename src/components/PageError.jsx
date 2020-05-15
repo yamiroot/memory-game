@@ -5,7 +5,7 @@ import ImgError from '../img/dinogif.gif';
 
 
 const PageError = () => (
-  <div data-testid="pageerror">
+  <div data-testid="view-error">
     <Header hide />
     <main role="main" className="PageError">
       <img src={ImgError} alt="Error 404" />
