@@ -4,7 +4,7 @@ import ImgBackFace from '../img/logoghibli.png';
 
 
 const ItemCard = ({ img, flipCard }) => (
-  <article role="presentation" className={img.id} data-card={img.alt} onClick={() => flipCard(img.id)}>
+  <article data-testid={img.id} role="presentation" className={img.id} data-card={img.alt} onClick={() => flipCard(img.id)}>
     <div role="img" className="front-face">
       <img src={img.url} alt={img.alt} />
     </div>

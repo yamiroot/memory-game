@@ -5,11 +5,13 @@ import {
   render, screen, cleanup, fireEvent,
 } from '@testing-library/react';
 import HashRouter from '../Router';
+import dataCards from '../data/cards';
+import GameCards from '../components/GameCards';
 
 
 afterEach(cleanup);
 
-
+/*
 const renderWithRouter = (component) => {
   const history = createMemoryHistory();
   return {
@@ -29,6 +31,7 @@ it('Se renderiza como vista principal a Game Cards.', () => {
   // La página renderiza el componente GameCards
   expect(container).toContainElement(main);
 });
+ */
 
 
 it('Se renderiza la vista Game Cards al dar click en el botón "game-button".', () => {
@@ -49,4 +52,17 @@ it('Se renderiza la vista Game Cards al dar click en el botón "game-button".', 
   expect(container).toContainElement(getByTestId('game'));
   // La página renderiza el componente Footer
   expect(screen.getByRole('contentinfo')).not.toBeEmpty();
+});
+
+
+it('Se renderiza la vista Game Cards con cada una de sus cartas.', () => {
+  const history = createMemoryHistory();
+  const { container, getByRole, getAllByRole } = render(
+    <Router history={history}>
+      <GameCards dataCards={dataCards} />
+    </Router>,
+  );
+
+  expect(container).toContainElement(getByRole('application'));
+  expect(getAllByRole('presentation')).toBeTruthy();
 });

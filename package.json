@@ -16,7 +16,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage --verbose",
+    "test": "react-scripts test --env=jest-environment-jsdom-sixteen --coverage --verbose",
     "eject": "react-scripts eject",
     "eslint": "eslint --ext .js --ext .jsx src/",
     "predeploy": "npm run build",
@@ -48,6 +48,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "gh-pages": "^2.2.0",
-    "history": "^4.10.1"
+    "history": "^4.10.1",
+    "jest-environment-jsdom-sixteen": "^1.0.3"
   }
 }
