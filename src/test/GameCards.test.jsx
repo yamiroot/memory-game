@@ -39,7 +39,7 @@ it('Se renderiza el componente Game Cards con 16 cartas.', () => {
 });
 
 
-it('Al dar click a un card se le añade la clase "flip", con ello ocurre el efecto flip.', () => {
+it('Al dar click a un card se le añade la clase "flip", con ello ocurre el efecto flip.', (async () => {
   const history = createMemoryHistory();
   const { container, getByTestId } = render(
     <Router history={history}>
@@ -52,13 +52,14 @@ it('Al dar click a un card se le añade la clase "flip", con ello ocurre el efec
   expect(getByTestId('img01')).toHaveClass('img01');
 
   // Damos click al card
-  act(() => {
+  await act(async () => {
     fireEvent.click(getByTestId('img01'));
   });
 
+
   // Se le añade la clase "flip"
   expect(getByTestId('img01')).toHaveAttribute('class', 'img01 flip');
-});
+}));
 
 
 it('Al dar click a dos cards pares se les añade la clase "hide", con ello desaparecen.', (async () => {
@@ -90,7 +91,7 @@ it('Al dar click a dos cards pares se les añade la clase "hide", con ello desap
   expect(getByTestId('img09')).toHaveAttribute('class', 'img09 flip');
 
   // Después de 1.5 segundos ambos cards pares desaparecen
-  await waitFor(() => {
+  waitFor(() => {
     expect(getByTestId('img01')).toHaveAttribute('class', 'img01 flip hidden');
     expect(getByTestId('img09')).toHaveAttribute('class', 'img09 flip hidden');
   });
@@ -110,7 +111,7 @@ it('Al dar click a dos cards impares se les añade la clase "flip", y luego se r
   expect(container).toContainElement(getByTestId('img07'));
 
   // Damos click al card "img01"
-  act(() => {
+  await act(async () => {
     fireEvent.click(getByTestId('img01'));
   });
 
@@ -118,7 +119,7 @@ it('Al dar click a dos cards impares se les añade la clase "flip", y luego se r
   expect(getByTestId('img01')).toHaveAttribute('class', 'img01 flip');
 
   // Damos click al card "img07"
-  act(() => {
+  await act(async () => {
     fireEvent.click(getByTestId('img07'));
   });
 
@@ -126,7 +127,7 @@ it('Al dar click a dos cards impares se les añade la clase "flip", y luego se r
   expect(getByTestId('img07')).toHaveAttribute('class', 'img07 flip');
 
   // Después de 1.5 segundos se remueve el efecto flip a ambos cards
-  await waitFor(() => {
+  waitFor(() => {
     expect(getByTestId('img01')).toHaveAttribute('class', 'img01');
     expect(getByTestId('img07')).toHaveAttribute('class', 'img07');
   });

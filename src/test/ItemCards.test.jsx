@@ -18,49 +18,41 @@ const card = {
 };
 
 
-it('Se renderiza una carta del juego.', (async () => {
+it('Se renderiza un card del juego.', () => {
   const history = createMemoryHistory();
   const flipCard = jest.fn();
-  const { container, getByTestId } = render(
+
+  const { container, queryByTestId } = render(
     <Router history={history}>
       <ItemCard img={card} key={card.id} flipCard={flipCard} />
     </Router>,
   );
 
-  expect(container).toContainElement(getByTestId('img01'));
-  expect(getByTestId('img01')).toHaveClass('img01');
+  expect(container).toContainElement(queryByTestId('img01'));
+  expect(queryByTestId('img01')).toHaveClass('img01');
+});
 
-  act(() => {
-    fireEvent.click(getByTestId('img01'));
+
+it('Al dar click a un card se le añade la clase "flip", con ello ocurre el efecto flip.', (async () => {
+  const history = createMemoryHistory();
+  const flipCard = jest.fn();
+
+  const { container, queryByTestId } = render(
+    <Router history={history}>
+      <ItemCard img={card} key={card.id} flipCard={flipCard} />
+    </Router>,
+  );
+
+  expect(container).toContainElement(queryByTestId('img01'));
+  expect(queryByTestId('img01')).toHaveClass('img01');
+
+  await act(async () => {
+    fireEvent.click(queryByTestId('img01'));
   });
 
   expect(flipCard).toHaveBeenCalled();
 
-  await waitFor(() => {
-    expect(getByTestId('img01')).toHaveAttribute('class', 'img01 flip');
+  waitFor(() => {
+    expect(queryByTestId('img01')).toHaveAttribute('class', 'img01 flip');
   });
 }));
-
-
-/* it('Se renderiza una carta del juego.', (async () => {
-  const history = createMemoryHistory();
-  const flipCard = jest.fn();
-  const { container, getByTestId } = render(
-    <Router history={history}>
-      <GameCards dataCards={dataCards} />
-    </Router>,
-  );
-
-  expect(container).toContainElement(getByTestId('img01'));
-  expect(getByTestId('img01')).toHaveClass('img01');
-
-  console.log(getByTestId('img01'));
-  act(() => {
-    fireEvent.click(getByTestId('img01'));
-  });
-
-  await waitFor(() => {
-    expect(getByTestId('img01')).toHaveAttribute('class', 'img01 flip');
-  });
-}));
- */
