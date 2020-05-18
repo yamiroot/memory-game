@@ -1,9 +1,10 @@
 <p align="center"><a href="public/logo.png"><img src="./public/logo.png" width=80px></a></p>
 <h1 align="center">Memory Game</h1>
 <p align="center">
-<img src="https://img.shields.io/badge/build-passing-green">
+<img src="https://img.shields.io/badge/build-passing-brightgreen">
 <img src="https://img.shields.io/badge/license-BSD--3--Clause-orange">
-<img src="https://img.shields.io/badge/npm-6.13.4-9cf">
+<img src="https://img.shields.io/badge/npm-v6.14.5-9cf">
+<img src="https://img.shields.io/badge/coverage-100%25-brightgreen">
 </p>
 
 Juego de cartas.
