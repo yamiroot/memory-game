@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
 
 const ModalGame = ({ show, onHide }) => (
   <Modal
+    data-testid="modal-game"
     show={show}
     onHide={onHide}
     aria-labelledby="contained-modal-title-vcenter"
@@ -25,9 +25,7 @@ const ModalGame = ({ show, onHide }) => (
       </p>
     </Modal.Body>
     <Modal.Footer>
-      <Link to="/">
-        <Button onClick={onHide} variant="warning">Volver a jugar</Button>
-      </Link>
+      <Button data-testid="button-new-game" onClick={onHide} variant="warning">Aceptar</Button>
     </Modal.Footer>
   </Modal>
 );

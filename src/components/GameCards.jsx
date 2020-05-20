@@ -10,42 +10,39 @@ import ModalGame from './ModalGame';
 const GameCards = ({ dataCards }) => {
   const [pairOfCards, setPairCards] = useState([]);
   const [idCard, setIdCard] = useState('');
-  const [cardsFound, setCardsFound] = useState([]);
+  const [cardsFound, setCardsFound] = useState(0);
   const [modalShow, setModalShow] = useState(true);
 
   const flipCard = (id) => {
+    const pairCards = pairOfCards;
     setIdCard(id);
 
-    if ((pairOfCards.length < 2) && (id !== idCard)) {
+    if ((pairCards.length < 2) && (id !== idCard)) {
       const element = document.querySelector(`.${id}`);
       element.classList.add('flip');
 
-      pairOfCards.push(element);
-      setPairCards(pairOfCards);
+      pairCards.push(element);
+      setPairCards(pairCards);
 
       if (pairOfCards.length === 2) {
-        if (pairOfCards[0].dataset.card === pairOfCards[1].dataset.card) {
-          cardsFound.push(pairOfCards[0].dataset.card);
-
-          setCardsFound(cardsFound);
+        if (pairCards[0].dataset.card === pairCards[1].dataset.card) {
+          setCardsFound(cardsFound + 1);
           setIdCard('');
 
           setTimeout(() => {
-            pairOfCards[0].classList.add('hidden');
-            pairOfCards[1].classList.add('hidden');
-
-            setPairCards([]);
+            pairCards[0].classList.add('hidden');
+            pairCards[1].classList.add('hidden');
           }, 1500);
         } else {
           setIdCard('');
 
           setTimeout(() => {
-            pairOfCards[0].classList.remove('flip');
-            pairOfCards[1].classList.remove('flip');
-
-            setPairCards([]);
+            pairCards[0].classList.remove('flip');
+            pairCards[1].classList.remove('flip');
           }, 1500);
         }
+
+        setPairCards([]);
       }
     }
   };
@@ -57,14 +54,14 @@ const GameCards = ({ dataCards }) => {
         <section role="application" className="Cards">
           {dataCards
             .map((card) => (<ItemCard img={card} key={card.id} flipCard={flipCard} />))}
-          {(cardsFound.length === 8) && (
+          {(cardsFound === 8) && (
           <ModalGame
             show={modalShow}
             onHide={() => setModalShow(false)}
           />
           )}
         </section>
-        <Link to="/">
+        <Link to="/" data-testid="link-new-game">
           <button type="button" data-testid="new-game" className="btn">Nueva partida</button>
         </Link>
       </main>

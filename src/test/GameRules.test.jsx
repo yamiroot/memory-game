@@ -7,13 +7,19 @@ import {
 import HashRouter from '../Router';
 
 
+// @testing-library/jest-dom
+
+// - toHaveTextContent: Esto le permite verificar si el elemento dado
+// tiene un contenido de texto o no.
+// Cuando se pasa un argumento de cadena, realizará una coincidencia
+// parcial entre mayúsculas y minúsculas con el contenido del elemento.
+
+
 afterEach(cleanup);
 
 
 const renderWithRouter = (component) => {
   const history = createMemoryHistory();
-
-  console.log('Ruta activada: ', history.location.pathname);
 
   return {
     ...render(

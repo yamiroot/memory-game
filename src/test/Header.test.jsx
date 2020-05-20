@@ -5,6 +5,10 @@ import { render, cleanup } from '@testing-library/react';
 import Header from '../components/Header';
 
 
+// js
+// - textContent: Propiedad que representa el contenido del nodo.
+
+
 afterEach(cleanup);
 
 

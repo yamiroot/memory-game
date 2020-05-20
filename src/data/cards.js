@@ -10,9 +10,6 @@ import ImgSusurros from '../img/susurros-del-corazon.jpg';
 
 /* Data de los cards */
 
-// La ruta de las imágenes se obtuvo importando cada imagen y
-// realizando a cada una de ellas un console.log()
-
 
 export default [{
   url: ImgTerramar,
