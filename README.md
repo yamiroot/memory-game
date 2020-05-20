@@ -57,7 +57,7 @@ El _boilerplate_ contiene la siguiente estructura de archivos:
 ├── public
 |  ├── index.html
 |  ├── logo.png
-|  ├── site.webmanifest
+|  └── site.webmanifest
 ├── src
 |  ├── components
 |  |  ├── Footer.jsx
@@ -71,18 +71,20 @@ El _boilerplate_ contiene la siguiente estructura de archivos:
 |  ├── data
 |  |    └── cards.js
 |  ├── img
-|  └── sass
-|       ├── styles.scss
+|  |    ├── assets
+|  |    └── utils
+|  ├── sass
+|  |    ├── styles.scss
+|  |    └── ...
+|  └── tests
 |       └── ...
 ├── index.jsx
 ├── Router.jsx
-├── test
-|  ├── data.spec.js
 ├── .gitignore
 ├── package.json
 └── README.md
 
-directory: 8 Components: 7
+directory: 10 Components: 7
 ```
 
 ## Licencia
