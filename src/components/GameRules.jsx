@@ -1,9 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ImgUno from '../img/1.png';
-import ImgTwo from '../img/2.png';
-import ImgThree from '../img/3.png';
+import ImgUno from '../img/assets/1.png';
+import ImgTwo from '../img/assets/2.png';
+import ImgThree from '../img/assets/3.png';
 
 
 const GameRules = () => (

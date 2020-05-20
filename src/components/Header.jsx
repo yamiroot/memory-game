@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import ImgLogo from '../img/logoGame.png';
+import ImgLogo from '../img/assets/logoGame.png';
 
 
 const Header = ({ hide }) => {

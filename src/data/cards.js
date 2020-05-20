@@ -1,11 +1,11 @@
-import ImgTerramar from '../img/cuentos-de-terramar.jpg';
-import ImgCastillo from '../img/el-castillo-ambulante.jpg';
-import ImgChijiro from '../img/el-viaje-de-chijiro.jpg';
-import ImgMononoke from '../img/la-princesa-mononoke.jpg';
-import ImgLuciernagas from '../img/la-tumba-de-las-luciernagas.jpg';
-import ImgTotoro from '../img/mi-vecino-totoro.jpg';
-import ImgYamada from '../img/mis-vecinos-los-yamada.jpg';
-import ImgSusurros from '../img/susurros-del-corazon.jpg';
+import ImgTerramar from '../img/utils/cuentos-de-terramar.jpg';
+import ImgCastillo from '../img/utils/el-castillo-ambulante.jpg';
+import ImgChijiro from '../img/utils/el-viaje-de-chijiro.jpg';
+import ImgMononoke from '../img/utils/la-princesa-mononoke.jpg';
+import ImgLuciernagas from '../img/utils/la-tumba-de-las-luciernagas.jpg';
+import ImgTotoro from '../img/utils/mi-vecino-totoro.jpg';
+import ImgYamada from '../img/utils/mis-vecinos-los-yamada.jpg';
+import ImgSusurros from '../img/utils/susurros-del-corazon.jpg';
 
 
 /* Data de los cards */

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import ImgError from '../img/dinogif.gif';
+import ImgError from '../img/assets/dinogif.gif';
 
 
 const PageError = () => (

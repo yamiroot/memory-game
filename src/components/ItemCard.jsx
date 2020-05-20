@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ImgBackFace from '../img/logoghibli.png';
+import ImgBackFace from '../img/assets/logoghibli.png';
 
 
 const ItemCard = ({ img, flipCard }) => (
