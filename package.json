@@ -2,7 +2,7 @@
   "name": "cards-memory",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yamiquispe.github.io/cards-memory",
+  "homepage": "https://yamiquispe.github.io/memory-game",
   "dependencies": {
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.4.1",
