@@ -30,9 +30,9 @@ Juego de cartas.
 
 ## Demos
 
+<img src="./src/img/demogame.png" alt="Demo Memory Game">
 
-<img src="./src/img/demo.png" alt="Demo Memory Game">
-
+<img src="./src/img/demorules.png" alt="Demo Memory Rules">
 
 ## Sobre el proyecto
 
