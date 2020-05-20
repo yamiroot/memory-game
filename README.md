@@ -30,9 +30,15 @@ Juego de cartas.
 
 ## Demos
 
+- **View game cards**
+
 <img src="./src/img/demogame.png" alt="Demo Memory Game">
 
+- **View game rules**
+
 <img src="./src/img/demorules.png" alt="Demo Memory Rules">
+
+- **View page error**
 
 <img src="./src/img/demoerror.png" alt="Demo Memory Error">
 
