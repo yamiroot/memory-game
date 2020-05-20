@@ -34,6 +34,8 @@ Juego de cartas.
 
 <img src="./src/img/demorules.png" alt="Demo Memory Rules">
 
+<img src="./src/img/demoerror.png" alt="Demo Memory Error">
+
 ## Sobre el proyecto
 
 - Implementado en `React`.
