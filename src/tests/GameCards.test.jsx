@@ -292,6 +292,8 @@ it('Cuando todos los cards pares sean encontrados, se renderiza el modal y se de
   act(() => {
     fireEvent.click(container.getByTestId('button-new-game'));
 
+    // Ocurre un cambio de estado, con ello se vuelve a renderizar View Game. Para ello deben
+    // de haberse ejecutado todos los temporizadores, ya que todos los cards fueron encontrados.
     jest.runAllTimers();
   });
 
