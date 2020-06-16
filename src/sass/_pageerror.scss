@@ -105,7 +105,7 @@
         }
     }
 
-    @media (min-width: $tablet) and (max-width: $desktop) {
+    @media (min-width: $tablet) and (max-width: $notebook) {
         @include style(row, 40px, 0);
 
         img {
@@ -129,7 +129,7 @@
         }
     }
 
-    @media (min-width: $desktop) and (max-width: $smart) {
+    @media (min-width: $notebook) and (max-width: $desktop) {
         @include style(row, 45px, 0);
 
         img {
@@ -153,7 +153,7 @@
         }
     }
 
-    @media (min-width: $smart) {
+    @media (min-width: $desktop) {
         @include style(row, 50px, 0);
 
         img {

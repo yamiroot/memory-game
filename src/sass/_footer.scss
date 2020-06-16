@@ -29,13 +29,13 @@ footer {
     @media (min-width: $smartphone) and (max-width: $tablet) {
         @include style(7px 10% 7px 10%, 16px);
     }
-    @media (min-width: $tablet) and (max-width: $desktop) {
+    @media (min-width: $tablet) and (max-width: $notebook) {
         @include style(8px 12% 8px 12%, 18px);
     }
-    @media (min-width: $desktop) and (max-width: $smart) {
+    @media (min-width: $notebook) and (max-width: $desktop) {
         @include style(9px 14% 9px 14%, 20px);
     }
-    @media (min-width: $smart) {
+    @media (min-width: $desktop) {
         @include style(10px 16% 10px 16%, 21px);
     }
 }

@@ -110,7 +110,7 @@
         }
     }
 
-    @media (min-width: $tablet) and (max-width: $desktop) {
+    @media (min-width: $tablet) and (max-width: $notebook) {
         @include style(column, 8px, 0);
 
         h2 {
@@ -138,7 +138,7 @@
         }
     }
 
-    @media (min-width: $desktop) and (max-width: $smart) {
+    @media (min-width: $notebook) and (max-width: $desktop) {
         @include style(column, 9px, 0);
 
         h2 {
@@ -166,7 +166,7 @@
         }
     }
 
-    @media (min-width: $smart) {
+    @media (min-width: $desktop) {
         @include style(column, 10px, 0);
 
         h2 {

@@ -82,7 +82,7 @@ header {
         }
     }
 
-    @media (min-width: $tablet) and (max-width: $desktop) {
+    @media (min-width: $tablet) and (max-width: $notebook) {
         @include size(100%, 90px);
 
         img {   
@@ -97,7 +97,7 @@ header {
     }
 
     
-    @media (min-width: $desktop) and (max-width: $smart) {
+    @media (min-width: $notebook) and (max-width: $desktop) {
         @include size(100%, 95px);
 
         img {   
@@ -112,7 +112,7 @@ header {
     }
 
     
-    @media (min-width: $smart) {
+    @media (min-width: $desktop) {
         @include size(100%, 100px);
 
         img {   
