@@ -44,7 +44,7 @@ header {
         @include size(100%, 75px);
 
         img {   
-            @include size(70%, 45px);
+            @include size(120px, 45px);
             margin-left: 20px;
         }
   
@@ -58,12 +58,12 @@ header {
         @include size(100%, 80px);
 
         img {   
-            @include size(73%, 47px);
+            @include size(50%, 47px);
             margin-left: 22px;
         }
   
         button[type="button"] {
-            @include size(93%, 42px);
+            @include size(115px, 42px);
             @include button(22px, 11px);
         }
     }
@@ -72,12 +72,12 @@ header {
         @include size(100%, 85px);
 
         img {   
-            @include size(76%, 49px);
+            @include size(55%, 49px);
             margin-left: 24px;
         }
   
         button[type="button"] {
-            @include size(96%, 44px);
+            @include size(20vw, 44px);
             @include button(24px, 12px);
         }
     }
@@ -86,12 +86,12 @@ header {
         @include size(100%, 90px);
 
         img {   
-            @include size(79%, 51px);
+            @include size(40vw, 51px);
             margin-left: 26px;
         }
   
         button[type="button"] {
-            @include size(99%, 46px);
+            @include size(20vw, 46px);
             @include button(26px, 14px);
         }
     }
@@ -101,12 +101,12 @@ header {
         @include size(100%, 95px);
 
         img {   
-            @include size(82%, 53px);
+            @include size(36vw, 53px);
             margin-left: 28px;
         }
   
         button[type="button"] {
-            @include size(100%, 48px);
+            @include size(20vw, 48px);
             @include button(28px, 16px);
         }
     }
@@ -116,7 +116,7 @@ header {
         @include size(100%, 100px);
 
         img {   
-            @include size(85%, 55px);
+            @include size(28vw, 55px);
             margin-left: 30px;
         }
   

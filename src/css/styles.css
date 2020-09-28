@@ -14,7 +14,7 @@ header a {
     height: 75px;
   }
   header img {
-    width: 70%;
+    width: 120px;
     height: 45px;
     margin-left: 20px;
   }
@@ -40,12 +40,12 @@ header a {
     height: 80px;
   }
   header img {
-    width: 73%;
+    width: 50%;
     height: 47px;
     margin-left: 22px;
   }
   header button[type=button] {
-    width: 93%;
+    width: 115px;
     height: 42px;
     background: #fdd44d;
     border: 3px solid gray;
@@ -66,12 +66,12 @@ header a {
     height: 85px;
   }
   header img {
-    width: 76%;
+    width: 55%;
     height: 49px;
     margin-left: 24px;
   }
   header button[type=button] {
-    width: 96%;
+    width: 20vw;
     height: 44px;
     background: #fdd44d;
     border: 3px solid gray;
@@ -92,12 +92,12 @@ header a {
     height: 90px;
   }
   header img {
-    width: 79%;
+    width: 40vw;
     height: 51px;
     margin-left: 26px;
   }
   header button[type=button] {
-    width: 99%;
+    width: 20vw;
     height: 46px;
     background: #fdd44d;
     border: 3px solid gray;
@@ -118,12 +118,12 @@ header a {
     height: 95px;
   }
   header img {
-    width: 82%;
+    width: 36vw;
     height: 53px;
     margin-left: 28px;
   }
   header button[type=button] {
-    width: 100%;
+    width: 20vw;
     height: 48px;
     background: #fdd44d;
     border: 3px solid gray;
@@ -144,7 +144,7 @@ header a {
     height: 100px;
   }
   header img {
-    width: 85%;
+    width: 28vw;
     height: 55px;
     margin-left: 30px;
   }
