@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.ac59fce9.chunk.css",
+    "main.js": "/memory-game/static/js/main.52fc9889.chunk.js",
+    "main.js.map": "/memory-game/static/js/main.52fc9889.chunk.js.map",
+    "runtime-main.js": "/memory-game/static/js/runtime-main.c98553d9.js",
+    "runtime-main.js.map": "/memory-game/static/js/runtime-main.c98553d9.js.map",
+    "static/js/2.e962a359.chunk.js": "/memory-game/static/js/2.e962a359.chunk.js",
+    "static/js/2.e962a359.chunk.js.map": "/memory-game/static/js/2.e962a359.chunk.js.map",
+    "index.html": "/memory-game/index.html",
+    "precache-manifest.774e44b2be3d05a0750aa03470f659e9.js": "/memory-game/precache-manifest.774e44b2be3d05a0750aa03470f659e9.js",
+    "service-worker.js": "/memory-game/service-worker.js",
+    "static/css/main.ac59fce9.chunk.css.map": "/memory-game/static/css/main.ac59fce9.chunk.css.map",
+    "static/js/2.e962a359.chunk.js.LICENSE.txt": "/memory-game/static/js/2.e962a359.chunk.js.LICENSE.txt",
+    "static/media/cuentos-de-terramar.jpg": "/memory-game/static/media/cuentos-de-terramar.f2879c73.jpg",
+    "static/media/el-castillo-ambulante.jpg": "/memory-game/static/media/el-castillo-ambulante.c97792fb.jpg",
+    "static/media/el-viaje-de-chijiro.jpg": "/memory-game/static/media/el-viaje-de-chijiro.9fa7ea9d.jpg",
+    "static/media/la-princesa-mononoke.jpg": "/memory-game/static/media/la-princesa-mononoke.1b826e0e.jpg",
+    "static/media/la-tumba-de-las-luciernagas.jpg": "/memory-game/static/media/la-tumba-de-las-luciernagas.e04fa394.jpg",
+    "static/media/logoGame.png": "/memory-game/static/media/logoGame.14a4fbf1.png",
+    "static/media/mi-vecino-totoro.jpg": "/memory-game/static/media/mi-vecino-totoro.39f14cb1.jpg",
+    "static/media/mis-vecinos-los-yamada.jpg": "/memory-game/static/media/mis-vecinos-los-yamada.7bda1f50.jpg",
+    "static/media/susurros-del-corazon.jpg": "/memory-game/static/media/susurros-del-corazon.f9096228.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c98553d9.js",
+    "static/js/2.e962a359.chunk.js",
+    "static/css/main.ac59fce9.chunk.css",
+    "static/js/main.52fc9889.chunk.js"
+  ]
+}
