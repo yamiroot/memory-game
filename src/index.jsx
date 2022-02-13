@@ -11,7 +11,7 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <React.StrictMode>
     <HashRouter>
-      <Router />
+      <Router basename={process.env.PUBLIC_URL}/>
     </HashRouter>
   </React.StrictMode>,
   document.getElementById('root'),
